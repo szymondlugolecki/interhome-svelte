@@ -2,6 +2,7 @@
 </script>
 
 <footer
+	id="stopka"
 	class="flex flex-col justify-center text-sm px-6 border-t border-border pb-[calc(3.5rem+2rem)] md:pb-8"
 >
 	<div class="flex flex-col items-center justify-center gap-4 py-6 font-medium md:flex-row">

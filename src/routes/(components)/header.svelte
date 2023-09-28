@@ -43,7 +43,7 @@
 				</PopoverTrigger>
 				<PopoverContent class="w-48">
 					<div class="grid gap-y-5">
-						{#each Object.entries(services) as [key, info]}
+						{#each Object.entries(services) as [_, info]}
 							<Button variant="link" href={info.url} class="whitespace-break-spaces"
 								>{info.label}</Button
 							>
