@@ -2,6 +2,8 @@
 	import BackgroundImage from '$assets/bg2.png?w=1500;1000&format=avif;webp;jpg&as=picture';
 	import AldoImage from '$assets/aldo.png?w=750&format=avif;webp;jpg&as=picture';
 	import AldoCEOImage from '$assets/aldo1.webp?w=500&format=avif;webp;jpg&as=picture';
+	import Customer1Image from '$assets/cristianoronaldo.jpeg?w=200&format=avif;webp;jpg&as=picture';
+	import Customer2Image from '$assets/robertlewandowski.jpg?w=200&format=avif;webp;jpg&as=picture';
 	import Image from '$components/custom/Util/image.svelte';
 	import { services } from '$lib/constants';
 	import Button from '$components/ui/button/button.svelte';
@@ -9,6 +11,7 @@
 	import ServiceImage from '$routes/(components)/service-image.svelte';
 	import OpenStatus from './(components)/open-status.svelte';
 	import { onMount } from 'svelte';
+	import { Separator } from 'bits-ui';
 
 	const typeSafeServices = Object.entries(services) as [
 		keyof typeof services,
@@ -180,7 +183,7 @@
 	{#each typeSafeServices as [service, data]}
 		<div class="flex justify-center w-full group/service">
 			<div
-				class="grid w-full grid-cols-1 px-8 py-6 transition-colors sm:py-12 lg:grid-cols-2 max-w-7xl rounded-3xl gap-x-16 gap-y-4"
+				class="grid w-full grid-cols-1 px-8 py-6 transition-colors justify-items-center sm:py-12 lg:grid-cols-2 max-w-7xl rounded-3xl gap-x-16 gap-y-4"
 			>
 				<ServiceImage {service} />
 				<div class="flex flex-col py-2 gap-y-4 max-w-[28rem] lg:max-w-none">
@@ -205,12 +208,80 @@
 	{/each}
 </section>
 
+<!-- Reviews -->
+<section
+	class="flex flex-col items-center w-full px-8 py-10 text-center gap-y-6 sm:py-16 bg-background/50"
+	id="reviews"
+>
+	<div
+		class="flex flex-col items-center justify-center px-8 py-6 gap-y-6 sm:py-32 lg:px-8 max-w-7xl"
+	>
+		<div class="text-center">
+			<h4 class="text-3xl font-medium">Opinie klientów</h4>
+		</div>
+		<div class="flex flex-col items-center justify-center gap-6 sm:flex-row">
+			<div class="flex flex-col items-start gap-y-3">
+				<span class="select-none">⭐⭐⭐⭐⭐</span>
+				<figure class="flex flex-col text-left gap-y-3">
+					<blockquote class="text-lg leading-8">
+						<p>
+							“Po meczu Ligi Mistrzów pilnie potrzebowałem turbosprężarki. Na szczęście znalazłem ją
+							w Interhome w konkurencyjnej cenie.“
+						</p>
+					</blockquote>
+					<figcaption class="flex items-center gap-x-3">
+						<div class="overflow-hidden rounded-full square-14">
+							<Image
+								class="object-cover object-center w-full h-full scale-[1.8] -translate-x-5 brightness-125 translate-y-[0px]"
+								loading="lazy"
+								meta={Customer1Image}
+								alt="Cristiano"
+							/>
+						</div>
+						<div class="flex flex-col text-left gap-y-1">
+							<span class="font-semibold">Cristiano</span>
+							<span>Klient</span>
+						</div>
+					</figcaption>
+				</figure>
+			</div>
+			<div class="hidden border-l border-border sm:flex w-[1px] h-full" />
+			<div class="flex border-t border-border sm:hidden h-[1px] w-full" />
+			<div class="flex flex-col items-start gap-y-3">
+				<span class="select-none">⭐⭐⭐⭐⭐</span>
+				<figure class="flex flex-col text-left gap-y-3">
+					<blockquote class="text-lg leading-8">
+						<p>
+							“Zawsze gdy potrzebuję zalegalizować kilka tachografów - odwiedzam Interhome. To moja
+							rutyna.“
+						</p>
+					</blockquote>
+					<figcaption class="flex items-center gap-x-3">
+						<div class="overflow-hidden rounded-full square-14">
+							<Image
+								class="object-cover object-center w-full h-full scale-[2.3] brightness-125 translate-y-4"
+								loading="lazy"
+								meta={Customer2Image}
+								alt="Robert"
+							/>
+						</div>
+						<div class="flex flex-col gap-y-1">
+							<span class="font-semibold">Robert</span>
+							<span>Klient</span>
+						</div>
+					</figcaption>
+				</figure>
+			</div>
+		</div>
+	</div>
+</section>
+
 <!-- Contact -->
 <section
-	class="flex flex-col items-center w-full py-10 text-center gap-y-6 sm:py-16 bg-background/50"
+	class="flex flex-col items-center w-full px-8 py-10 text-center gap-y-6 sm:py-16 bg-background/50"
 	id="kontakt"
 >
-	<h4 class="text-3xl font-medium">Dane kontaktowe</h4>
+	<h5 class="text-3xl font-medium">Dane kontaktowe</h5>
 
 	<address class="flex flex-col sm:flex-row gap-x-24 gap-y-6">
 		<div class="flex flex-col text-left">
@@ -225,4 +296,23 @@
 			<span><a href="mailto:office@interhome.com.pl"> office@interhome.com.pl </a></span>
 		</div>
 	</address>
+</section>
+
+<!-- Map -->
+<section
+	class="flex flex-col items-center w-full px-8 pb-10 text-center gap-y-6 sm:pb-16 bg-background/50"
+	id="map"
+>
+	<div class="flex justify-center w-full overflow-x-auto rounded-lg">
+		<iframe
+			title="Mapa dojazdu do Interhome"
+			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2408.542285868978!2d20.6028713!3d52.8666473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471c2ec13d0ccdc1%3A0xd22ced45baf77712!2sMazowiecka%206%2C%2006-400%20Ciechan%C3%B3w!5e0!3m2!1spl!2spl!4v1689539529109!5m2!1spl!2spl"
+			width="1216"
+			height="450"
+			class="border-0 rounded-lg"
+			allowFullScreen={true}
+			loading="lazy"
+			referrerPolicy="no-referrer-when-downgrade"
+		/>
+	</div>
 </section>
