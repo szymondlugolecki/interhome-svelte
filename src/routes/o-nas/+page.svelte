@@ -15,10 +15,10 @@
 	<div class="flex w-full max-w-3xl px-8 pt-24 pb-12 sm:pb-24 sm:px-12 lg:max-w-7xl gap-x-12">
 		<div class="flex flex-col flex-1 gap-y-6">
 			<div
-				class="flex justify-center w-full overflow-hidden duration-700 h-36 sm:h-96 animate-in fade-in-0 slide-in-from-top-48"
+				class="flex justify-center w-full overflow-hidden duration-700 h-52 sm:h-80 md:h-96 animate-in fade-in-0 slide-in-from-top-48"
 			>
 				<Image
-					class="object-cover object-center w-full h-full scale-[1.25] md:scale-[1.4] lg:scale-[1.8]"
+					class="object-scale-down object-center w-full h-auto xs:-translate-y-20 sm:-translate-y-10 lg:-translate-y-44 xl:-translate-y-52"
 					loading="eager"
 					meta={BackgroundImage1}
 					alt="budynek Interhome"
@@ -44,10 +44,10 @@
 				Mazowiecka 6
 			</p>
 			<div
-				class="flex justify-center w-full overflow-hidden duration-700 h-36 sm:h-96 animate-in fade-in-0 slide-in-from-top-48"
+				class="flex justify-center w-full overflow-hidden duration-700 h-52 sm:h-80 md:h-96 animate-in fade-in-0 slide-in-from-top-48"
 			>
 				<Image
-					class="object-cover object-center w-full h-full scale-[1.25] md:scale-[1.4] lg:scale-[1.8]"
+					class="object-scale-down object-center w-full h-auto xs:-translate-y-20 sm:-translate-y-10 lg:-translate-y-44 xl:-translate-y-52"
 					loading="eager"
 					meta={BackgroundImage2}
 					alt="warsztat Interhome"
