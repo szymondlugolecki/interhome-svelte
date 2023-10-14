@@ -103,7 +103,7 @@
 		class="relative flex flex-col items-center justify-center h-screen max-w-2xl px-0 mx-auto text-center gap-y-1"
 	>
 		<h1 class="text-5xl font-bold tracking-tight text-white uppercase sm:text-7xl">Interhome</h1>
-		<p class="max-w-sm px-2 text-lg text-white sm:text-xl">
+		<p class="max-w-sm px-4 text-lg text-white sm:text-xl">
 			Centrum Motoryzacji. Mechanika. Hamownia. Regeneracja turbosprężarek
 		</p>
 	</div>
@@ -230,17 +230,16 @@
 	class="flex flex-col items-center w-full px-8 py-10 text-center gap-y-6 sm:py-16 bg-background/50"
 	id="reviews"
 >
-	<div
-		class="flex flex-col items-center justify-center px-8 py-6 gap-y-6 sm:py-32 lg:px-8 max-w-7xl"
-	>
+	<div class="flex flex-col items-center justify-center py-6 gap-y-6 sm:py-32 lg:px-8 max-w-7xl">
 		<div class="text-center">
 			<h4 class="text-3xl font-medium">Opinie klientów</h4>
 		</div>
-		<div class="grid grid-cols-2 gap-x-4 gap-y-6">
+		<div class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-6">
 			<Review
 				review="Zleciłem przegląd auta z wymianą oleju silnikowego i kompletu filtrów w Audi Q7.
 			Usługa wykonana sprawnie i profesjonalnie. Polecam."
 				name="Janusz"
+				class=""
 			/>
 
 			<Review
@@ -254,7 +253,7 @@
 			na kolejny dzień. Po kilku godzinach usterka została naprawiona i tego samego dnia
 			mogłem odebrać auto. Firma godna polecenia."
 				name="Piotr"
-				class="col-span-2"
+				class="sm:col-span-2"
 			/>
 		</div>
 	</div>

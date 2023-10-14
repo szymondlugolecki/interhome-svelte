@@ -40,8 +40,8 @@
 				daje możliwość zrealizowania różnego rodzaju usług związanych z pojazdem w jednym miejscu,
 				bez straty cennego czasu. Dla klientów naszej firmy mamy do dyspozycji wykwalifikowaną i
 				ciągle podnoszącą swoje kompetencje kadrę pracowników, która zapewnia szybką i fachową
-				obsługę. <br /><br />Zapraszamy do współpracy Interhome Company LTD Ciechanów, ul.
-				Mazowiecka 6
+				obsługę. <br /><br />Zapraszamy do współpracy
+				<bold class="font-medium">Interhome Company LTD</bold> Ciechanów, ul. Mazowiecka 6
 			</p>
 			<div
 				class="flex justify-center w-full overflow-hidden duration-700 h-52 sm:h-80 md:h-96 animate-in fade-in-0 slide-in-from-top-48"

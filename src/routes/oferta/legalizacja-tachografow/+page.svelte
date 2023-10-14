@@ -78,8 +78,8 @@
 	<h3 class="text-2xl font-semibold tracking-tight scroll-m-20">Najważniejsze daty</h3>
 
 	<div class="flex justify-center w-full">
-		<div class="max-w-[272px] overflow-auto sm:max-w-none w-full">
-			<Timeline position="alternate">
+		<div class="w-full max-w-full overflow-auto xs:max-w-none">
+			<Timeline style="padding-left: 0px; padding-right: 0px;" position="alternate">
 				{#each options as option}
 					<TimelineItem>
 						<TimelineOppositeContent slot="opposite-content">
