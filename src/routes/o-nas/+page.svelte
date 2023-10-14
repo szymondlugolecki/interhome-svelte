@@ -15,10 +15,10 @@
 	<div class="flex w-full max-w-3xl px-8 pt-24 pb-12 sm:pb-24 sm:px-12 lg:max-w-7xl gap-x-12">
 		<div class="flex flex-col flex-1 gap-y-6">
 			<div
-				class="justify-center hidden w-full overflow-hidden duration-700 h-96 lg:flex animate-in fade-in-0 slide-in-from-top-48"
+				class="flex justify-center w-full overflow-hidden duration-700 h-36 sm:h-96 animate-in fade-in-0 slide-in-from-top-48"
 			>
 				<Image
-					class="object-cover object-center w-full h-full scale-[2]"
+					class="object-cover object-center w-full h-full scale-[1.25] md:scale-[1.4] lg:scale-[1.8]"
 					loading="eager"
 					meta={BackgroundImage1}
 					alt="budynek Interhome"
@@ -44,10 +44,10 @@
 				Mazowiecka 6
 			</p>
 			<div
-				class="justify-center hidden w-full overflow-hidden duration-700 h-96 lg:flex animate-in fade-in-0 slide-in-from-top-48"
+				class="flex justify-center w-full overflow-hidden duration-700 h-36 sm:h-96 animate-in fade-in-0 slide-in-from-top-48"
 			>
 				<Image
-					class="object-cover object-center w-full h-full scale-[2]"
+					class="object-cover object-center w-full h-full scale-[1.25] md:scale-[1.4] lg:scale-[1.8]"
 					loading="eager"
 					meta={BackgroundImage2}
 					alt="warsztat Interhome"
