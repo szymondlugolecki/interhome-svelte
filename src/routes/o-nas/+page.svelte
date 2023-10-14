@@ -1,5 +1,7 @@
 <script lang="ts">
-	import BackgroundImage from '$assets/bg3.jpg?w=1000&format=avif;webp;jpg&as=picture';
+	// import BackgroundImage from '$assets/bg3.jpg?w=1000&format=avif;webp;jpg&as=picture';
+	import BackgroundImage1 from '$assets/about_us_1.jpg?w=2000&format=avif;webp;jpg&as=picture';
+	import BackgroundImage2 from '$assets/about_us_2.jpg?w=2000&format=avif;webp;jpg&as=picture';
 	import Image from '$components/custom/Util/image.svelte';
 	import { services } from '$lib/constants';
 </script>
@@ -11,7 +13,17 @@
 
 <div class="flex justify-center w-full min-h-screen">
 	<div class="flex w-full max-w-3xl px-8 pt-24 pb-12 sm:pb-24 sm:px-12 lg:max-w-7xl gap-x-12">
-		<div class="flex flex-col flex-1 gap-y-3">
+		<div class="flex flex-col flex-1 gap-y-6">
+			<div
+				class="justify-center hidden w-full overflow-hidden duration-700 h-96 lg:flex animate-in fade-in-0 slide-in-from-top-48"
+			>
+				<Image
+					class="object-cover object-center w-full h-full scale-[2]"
+					loading="eager"
+					meta={BackgroundImage1}
+					alt="budynek Interhome"
+				/>
+			</div>
 			<h1 class="text-4xl font-medium tracking-tight">O nas</h1>
 			<p class="text-sm sm:text-base first-letter:text-xl">
 				Firma Interhome Company Ltd. istnieje od 1991 roku. W 2000r. weszliśmy na rynek
@@ -31,16 +43,27 @@
 				obsługę. <br /><br />Zapraszamy do współpracy Interhome Company LTD Ciechanów, ul.
 				Mazowiecka 6
 			</p>
-		</div>
-		<div
-			class="h-full hidden w-[32rem] lg:flex animate-in fade-in-0 slide-in-from-top-48 duration-700"
-		>
-			<Image
-				class="object-cover object-center w-full h-full"
-				loading="eager"
-				meta={BackgroundImage}
-				alt="tło strony, warsztat samochodowy"
-			/>
+			<div
+				class="justify-center hidden w-full overflow-hidden duration-700 h-96 lg:flex animate-in fade-in-0 slide-in-from-top-48"
+			>
+				<Image
+					class="object-cover object-center w-full h-full scale-[2]"
+					loading="eager"
+					meta={BackgroundImage2}
+					alt="warsztat Interhome"
+				/>
+			</div>
 		</div>
 	</div>
 </div>
+
+<!-- <div
+class="h-full hidden w-[32rem] lg:flex animate-in fade-in-0 slide-in-from-top-48 duration-700"
+>
+<Image
+	class="object-cover object-center w-full h-full"
+	loading="eager"
+	meta={BackgroundImage}
+	alt="tło strony, warsztat samochodowy"
+/>
+</div> -->

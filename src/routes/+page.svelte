@@ -7,26 +7,27 @@
 	import Image from '$components/custom/Util/image.svelte';
 	import { services } from '$lib/constants';
 	import Button from '$components/ui/button/button.svelte';
-	import { cn } from '$lib/utils';
 	import ServiceImage from '$routes/(components)/service-image.svelte';
 	import OpenStatus from './(components)/open-status.svelte';
 	import { onMount } from 'svelte';
-	import { Separator } from 'bits-ui';
+	import Review from './(components)/review.svelte';
 
-	const typeSafeServices = Object.entries(services) as [
+	const serviceEntries = Object.entries(services) as [
 		keyof typeof services,
 		(typeof services)[keyof typeof services]
 	][];
+
+	let time = new Date();
 
 	const openingHours = {
 		motorization: {
 			week: {
 				opens: 8,
-				closes: 16 // 17
+				closes: 17
 			},
 			saturday: {
-				opens: 8,
-				closes: 14
+				opens: null,
+				closes: null
 			}
 		},
 		station: {
@@ -40,8 +41,6 @@
 			}
 		}
 	};
-
-	let time = new Date();
 
 	onMount(() => {
 		// Update the time every minute
@@ -66,9 +65,22 @@
 			return false;
 		}
 
+		if (service === 'motorization' && dayOfTheWeek > 5) {
+			return false;
+		}
+
 		const { opens, closes } = openingHours[service][dayOfTheWeek <= 5 ? 'week' : 'saturday'];
 
+		if (!opens || !closes) {
+			return false;
+		}
+
 		return hour >= opens && hour < closes;
+	};
+
+	const formatHour = (hour: number | null) => {
+		if (!hour) return '';
+		return `${hour}:00`;
 	};
 </script>
 
@@ -111,9 +123,9 @@
 				<dt class="text-lg font-medium">Centrum motoryzacji</dt>
 				<dd>
 					<p class="text-sm text-muted-foreground">
-						Poniedziałek - Piątek: 8:00 - 17:00
-						<br />
-						Sobota: 8:00 - 14:00
+						Poniedziałek - Piątek: {formatHour(openingHours.motorization.week.opens)} - {formatHour(
+							openingHours.motorization.week.closes
+						)}
 					</p>
 				</dd>
 			</dl>
@@ -122,9 +134,13 @@
 				<dt class="text-lg font-medium">Stacja kontroli pojazdów</dt>
 				<dd>
 					<p class="text-sm text-muted-foreground">
-						Poniedziałek - Piątek: 7:00 - 18:00
+						Poniedziałek - Piątek: {formatHour(openingHours.station.week.opens)} - {formatHour(
+							openingHours.station.week.closes
+						)}
 						<br />
-						Sobota: 7:00 - 14:00
+						Sobota: {formatHour(openingHours.station.saturday.opens)} - {formatHour(
+							openingHours.station.saturday.closes
+						)}
 					</p>
 				</dd>
 			</dl>
@@ -180,7 +196,7 @@
 	<div class="w-full py-6 text-center sm:py-16 bg-background/50">
 		<h3 class="text-3xl font-medium">Nasza oferta</h3>
 	</div>
-	{#each typeSafeServices as [service, data]}
+	{#each serviceEntries as [service, data]}
 		<div class="flex justify-center w-full group/service">
 			<div
 				class="grid w-full grid-cols-1 px-8 py-6 transition-colors justify-items-center sm:py-12 lg:grid-cols-2 max-w-7xl rounded-3xl gap-x-16 gap-y-4"
@@ -190,13 +206,14 @@
 					<dl class="flex flex-col gap-y-2">
 						<dt class="text-lg font-medium">{data.label}</dt>
 						<dd class="text-sm first-letter:text-base">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in massa mauris. Nullam
+							{data.description ||
+								`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in massa mauris. Nullam
 							porta dolor et efficitur lobortis. Praesent libero ex, bibendum et magna et, iaculis
 							molestie leo. Duis vestibulum lorem eget sollicitudin euismod. Class aptent taciti
 							sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin luctus,
 							metus sed suscipit vestibulum, ligula sem auctor mauris, vulputate malesuada turpis
 							leo et lectus. Donec tristique, nibh vel vehicula lobortis, turpis purus bibendum
-							odio, ut lacinia velit metus elementum neque.
+							odio, ut lacinia velit metus elementum neque.`}
 						</dd>
 					</dl>
 					<div class="">
@@ -219,59 +236,26 @@
 		<div class="text-center">
 			<h4 class="text-3xl font-medium">Opinie klientów</h4>
 		</div>
-		<div class="flex flex-col items-center justify-center gap-6 sm:flex-row">
-			<div class="flex flex-col items-start gap-y-3">
-				<span class="select-none">⭐⭐⭐⭐⭐</span>
-				<figure class="flex flex-col text-left gap-y-3">
-					<blockquote class="text-lg leading-8">
-						<p>
-							“Po meczu Ligi Mistrzów pilnie potrzebowałem turbosprężarki. Na szczęście znalazłem ją
-							w Interhome w konkurencyjnej cenie.“
-						</p>
-					</blockquote>
-					<figcaption class="flex items-center gap-x-3">
-						<div class="overflow-hidden rounded-full square-14">
-							<Image
-								class="object-cover object-center w-full h-full scale-[1.8] -translate-x-5 brightness-125 translate-y-[0px]"
-								loading="lazy"
-								meta={Customer1Image}
-								alt="Cristiano"
-							/>
-						</div>
-						<div class="flex flex-col text-left gap-y-1">
-							<span class="font-semibold">Cristiano</span>
-							<span>Klient</span>
-						</div>
-					</figcaption>
-				</figure>
-			</div>
-			<div class="hidden border-l border-border sm:flex w-[1px] h-full" />
-			<div class="flex border-t border-border sm:hidden h-[1px] w-full" />
-			<div class="flex flex-col items-start gap-y-3">
-				<span class="select-none">⭐⭐⭐⭐⭐</span>
-				<figure class="flex flex-col text-left gap-y-3">
-					<blockquote class="text-lg leading-8">
-						<p>
-							“Zawsze gdy potrzebuję zalegalizować kilka tachografów - odwiedzam Interhome. To moja
-							rutyna.“
-						</p>
-					</blockquote>
-					<figcaption class="flex items-center gap-x-3">
-						<div class="overflow-hidden rounded-full square-14">
-							<Image
-								class="object-cover object-center w-full h-full scale-[2.3] brightness-125 translate-y-4"
-								loading="lazy"
-								meta={Customer2Image}
-								alt="Robert"
-							/>
-						</div>
-						<div class="flex flex-col gap-y-1">
-							<span class="font-semibold">Robert</span>
-							<span>Klient</span>
-						</div>
-					</figcaption>
-				</figure>
-			</div>
+		<div class="grid grid-cols-2 gap-x-4 gap-y-6">
+			<Review
+				review="Zleciłem przegląd auta z wymianą oleju silnikowego i kompletu filtrów w Audi Q7.
+			Usługa wykonana sprawnie i profesjonalnie. Polecam."
+				name="Janusz"
+			/>
+
+			<Review
+				review="Z moim samochodem zwiedziłem 3 warsztaty i nikt nie mógł zdiagnozować usterki w instalacji elektrycznej.
+			W Interhome elektryk poradził sobie z problemem w dwie godziny."
+				name="Rafał"
+			/>
+
+			<Review
+				review="Miałem problem ze stukami w przednim zawieszeniu mojego samochodu. Zostałem umówiony
+			na kolejny dzień. Po kilku godzinach usterka została naprawiona i tego samego dnia
+			mogłem odebrać auto. Firma godna polecenia."
+				name="Piotr"
+				class="col-span-2"
+			/>
 		</div>
 	</div>
 </section>
@@ -281,6 +265,10 @@
 	class="flex flex-col items-center w-full px-8 py-10 text-center gap-y-6 sm:py-16 bg-background/50"
 	id="kontakt"
 >
+	<!-- Filler div -->
+	<!-- When navigating to Contact, Header overlaps part of the text -->
+	<div class="w-full h-4" />
+
 	<h5 class="text-3xl font-medium">Dane kontaktowe</h5>
 
 	<address class="flex flex-col sm:flex-row gap-x-24 gap-y-6">
