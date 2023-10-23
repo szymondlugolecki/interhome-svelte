@@ -22,7 +22,7 @@
 	$: activeUrl = $page.url.pathname;
 </script>
 
-<header class="fixed top-0 z-50 w-full text-center bg-background">
+<header class="fixed top-0 z-40 w-full text-center bg-background">
 	<nav
 		class="relative flex items-center justify-between w-full px-4 mx-auto max-w-7xl sm:px-6 lg:px-8"
 	>
