@@ -14,7 +14,7 @@
 		});
 	}
 
-	console.log('images', images);
+	// console.log('images', images);
 </script>
 
 <div class="flex justify-center min-h-screen pt-24 pb-12">

@@ -66,7 +66,6 @@
 			loader
 				.importLibrary('maps')
 				.then(({ Map }) => {
-					console.log('new map', mapOptions);
 					new Map(mapElement, mapOptions);
 				})
 				.catch((e) => {
