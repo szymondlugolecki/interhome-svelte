@@ -9,7 +9,11 @@
 		TimelineOppositeContent
 	} from 'svelte-vertical-timeline';
 
-	const options = [
+	import PhotoSwipeGallery from 'svelte-photoswipe';
+	import type { GalleryItem } from 'svelte-photoswipe';
+	// import Tachographs1 from '$assets/services/legalizacja-tachografow/1.jpg?w=750&format=avif;webp;jpg&as=picture';
+
+	const timelineOptions = [
 		{
 			title:
 				'Auta nowo zarejestrowane muszą być wyposażone w tachograf inteligenty drugiej generacji',
@@ -31,6 +35,16 @@
 			time: '01.06.2026'
 		}
 	];
+
+	const images: GalleryItem[] = [];
+	images.push({
+		src: '/legalizacja-tachografow/1.png',
+		width: 3000,
+		height: 4000,
+		alt: 'Photo', // optional
+		cropped: false, // optional, default=false; see https://photoswipe.com/v5/docs/
+		thumbnail: { src: '/legalizacja-tachografow/1.png', width: 300, height: 400 }
+	});
 </script>
 
 <h1 class="text-4xl font-extrabold tracking-tight scroll-m-20 lg:text-5xl">
@@ -80,7 +94,7 @@
 	<div class="flex justify-center w-full">
 		<div class="w-full max-w-full overflow-auto xs:max-w-none">
 			<Timeline style="padding-left: 0px; padding-right: 0px;" position="alternate">
-				{#each options as option}
+				{#each timelineOptions as option}
 					<TimelineItem>
 						<TimelineOppositeContent slot="opposite-content">
 							<p>{option.time}</p>
@@ -97,4 +111,8 @@
 			</Timeline>
 		</div>
 	</div>
+</div>
+
+<div class="flex w-full py-6">
+	<PhotoSwipeGallery {images} styling="flex" />
 </div>

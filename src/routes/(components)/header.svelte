@@ -7,6 +7,17 @@
 	import { cn } from '$lib/utils';
 	import { Button } from '$components/ui/button';
 	import { services } from '$lib/constants';
+	import { Menu } from 'lucide-svelte';
+
+	import { createPopover } from '@melt-ui/svelte';
+	import MobileHeader from './mobile-header.svelte';
+
+	const {
+		elements: { trigger, content, arrow, close },
+		states: { open }
+	} = createPopover({
+		forceVisible: true
+	});
 
 	$: activeUrl = $page.url.pathname;
 </script>
@@ -25,7 +36,7 @@
 				</div>
 			</a>
 		</div>
-		<div class="flex items-center justify-center py-6 font-medium gap-x-6">
+		<div class="items-center justify-center hidden py-6 font-medium sm:flex gap-x-6">
 			<a
 				class={cn('hidden sm:inline transition-colors', activeUrl === '/' && 'text-blue-600')}
 				href="/">Start</a
@@ -64,6 +75,10 @@
 				href="/o-nas">O nas</a
 			>
 			<a class="transition-colors hover:text-blue-600" href="/#kontakt">Kontakt</a>
+			<a class="transition-colors hover:text-blue-600" href="/galeria">Galeria</a>
+		</div>
+		<div class="py-[1.5rem] sm:hidden">
+			<MobileHeader />
 		</div>
 	</nav>
 </header>

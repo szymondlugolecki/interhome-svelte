@@ -1,41 +1,24 @@
 <script lang="ts">
-	import PhotoSwipeLightbox from 'photoswipe/lightbox';
-	import PhotoSwipe from 'photoswipe';
-	import 'photoswipe/style.css';
+	import PhotoSwipeGallery from 'svelte-photoswipe';
+	import type { GalleryItem } from 'svelte-photoswipe';
+	const images: GalleryItem[] = [];
 
-	// import BackgroundImage from '$assets/bg2.png?w=1500;1000&format=avif;webp;jpg&as=picture';
-	// import Image from '$components/custom/Util/image.svelte';
-
-	let galleryID = 'gallery';
-
-	const lightbox = new PhotoSwipeLightbox({
-		gallery: '#gallery--no-dynamic-import',
-		children: 'a',
-		pswpModule: PhotoSwipe
-	});
-
-	lightbox.init();
-
-	interface Image {
-		thumbnailURL: string;
-		largeURL: string;
-		width: number;
-		height: number;
+	for (let q = 0; q < 9; q++) {
+		images.push({
+			src: `/galeria/${q + 1}.jpg`,
+			width: 1500,
+			height: 1000,
+			alt: `Zdjęcie ${q + 1}`,
+			cropped: true,
+			thumbnail: { src: `/galeria/${q + 1}.jpg`, width: 450, height: 300 }
+		});
 	}
 
-	let images: Image[] = [];
+	console.log('images', images);
 </script>
 
-<div class="pswp-gallery" id={galleryID}>
-	{#each images as image}
-		<a
-			href={image.largeURL}
-			data-pswp-width={image.width}
-			data-pswp-height={image.height}
-			target="_blank"
-			rel="noreferrer"
-		>
-			<img src={image.thumbnailURL} alt="" />
-		</a>
-	{/each}
+<div class="flex justify-center min-h-screen pt-24 pb-12">
+	<div class="px-4 gap-y-6 max-w-7xl sm:px-6 lg:px-8">
+		<PhotoSwipeGallery {images} styling="flex" />
+	</div>
 </div>

@@ -12,6 +12,9 @@
 	import { onMount } from 'svelte';
 	import Review from './(components)/review.svelte';
 
+	import { Loader } from '@googlemaps/js-api-loader';
+	import { env } from '$env/dynamic/public';
+
 	const serviceEntries = Object.entries(services) as [
 		keyof typeof services,
 		(typeof services)[keyof typeof services]
@@ -42,7 +45,35 @@
 		}
 	};
 
+	const mapOptions = {
+		center: {
+			lat: 52.866647,
+			lng: 20.602871
+		},
+		zoom: 18
+	} satisfies google.maps.MapOptions;
+
 	onMount(() => {
+		const loader = new Loader({
+			apiKey: env.PUBLIC_GOOGLE_MAPS_API_KEY,
+			version: 'weekly'
+		});
+
+		const mapElement = document.getElementById('mapa');
+
+		if (mapElement) {
+			loader
+				.importLibrary('maps')
+				.then(({ Map }) => {
+					console.log('new map', mapOptions);
+					new Map(mapElement, mapOptions);
+				})
+				.catch((e) => {
+					// do something
+					console.error(e);
+				});
+		}
+
 		// Update the time every minute
 		const interval = setInterval(() => {
 			time = new Date();
@@ -121,27 +152,23 @@
 			<dl class="flex flex-col gap-y-3">
 				<OpenStatus open={motorizationOpen} />
 				<dt class="text-lg font-medium">Centrum motoryzacji</dt>
-				<dd>
-					<p class="text-sm text-muted-foreground">
-						Poniedziałek - Piątek: {formatHour(openingHours.motorization.week.opens)} - {formatHour(
-							openingHours.motorization.week.closes
-						)}
-					</p>
+				<dd class="text-sm text-muted-foreground">
+					Poniedziałek - Piątek: {formatHour(openingHours.motorization.week.opens)} - {formatHour(
+						openingHours.motorization.week.closes
+					)}
 				</dd>
 			</dl>
 			<dl class="flex flex-col gap-y-3">
 				<OpenStatus open={stationOpen} />
 				<dt class="text-lg font-medium">Stacja kontroli pojazdów</dt>
-				<dd>
-					<p class="text-sm text-muted-foreground">
-						Poniedziałek - Piątek: {formatHour(openingHours.station.week.opens)} - {formatHour(
-							openingHours.station.week.closes
-						)}
-						<br />
-						Sobota: {formatHour(openingHours.station.saturday.opens)} - {formatHour(
-							openingHours.station.saturday.closes
-						)}
-					</p>
+				<dd class="text-sm text-muted-foreground">
+					Poniedziałek - Piątek: {formatHour(openingHours.station.week.opens)} - {formatHour(
+						openingHours.station.week.closes
+					)}
+					<br />
+					Sobota: {formatHour(openingHours.station.saturday.opens)} - {formatHour(
+						openingHours.station.saturday.closes
+					)}
 				</dd>
 			</dl>
 		</div>
@@ -193,6 +220,10 @@
 	id="oferta"
 	class="flex flex-col items-center justify-start w-full [&>*:nth-child(odd)]:bg-background/50 [&>*:nth-child(even)]:bg-background"
 >
+	<!-- Filler div -->
+	<!-- When navigating to Offer, Header overlaps part of the text -->
+	<div class="w-full h-[84px]" />
+
 	<div class="w-full py-6 text-center sm:py-16 bg-background/50">
 		<h3 class="text-3xl font-medium">Nasza oferta</h3>
 	</div>
@@ -266,7 +297,7 @@
 >
 	<!-- Filler div -->
 	<!-- When navigating to Contact, Header overlaps part of the text -->
-	<div class="w-full h-4" />
+	<div class="w-full h-[84px]" />
 
 	<h5 class="text-3xl font-medium">Dane kontaktowe</h5>
 
@@ -291,7 +322,8 @@
 	id="map"
 >
 	<div class="flex justify-center w-full overflow-x-auto rounded-lg">
-		<iframe
+		<div id="mapa" class="w-[1216px] h-[450px]" />
+		<!-- <iframe
 			title="Mapa dojazdu do Interhome"
 			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2408.542285868978!2d20.6028713!3d52.8666473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471c2ec13d0ccdc1%3A0xd22ced45baf77712!2sMazowiecka%206%2C%2006-400%20Ciechan%C3%B3w!5e0!3m2!1spl!2spl!4v1689539529109!5m2!1spl!2spl"
 			width="1216"
@@ -300,6 +332,6 @@
 			allowFullScreen={true}
 			loading="lazy"
 			referrerPolicy="no-referrer-when-downgrade"
-		/>
+		/> -->
 	</div>
 </section>

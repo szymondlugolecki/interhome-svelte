@@ -1,8 +1,8 @@
 <script lang="ts">
-	import VehicleMechanicsImage from '$assets/services/mechanika-pojazdowa.jpg?w=750&format=avif;webp;jpg&as=picture';
-	import TurbochargerRegenerationImage from '$assets/services/regeneracja-turbosprezarek.jpg?w=750&format=avif;webp;jpg&as=picture';
-	import DistrictVehicleInspectionStationImage from '$assets/services/okregowa-stacja-kontroli-pojazdow.jpg?w=750&format=avif;webp;jpg&as=picture';
-	import TachographsLegalizationImage from '$assets/services/legalizacja-tachografow.jpg?w=750&format=avif;webp;jpg&as=picture';
+	import VehicleMechanicsImage from '$assets/services/mechanika-pojazdowa/main.jpg?w=750&format=avif;webp;jpg&as=picture';
+	import TurbochargerRegenerationImage from '$assets/services/regeneracja-turbosprezarek/main.jpg?w=750&format=avif;webp;jpg&as=picture';
+	import DistrictVehicleInspectionStationImage from '$assets/services/okregowa-stacja-kontroli-pojazdow/main.jpg?w=750&format=avif;webp;jpg&as=picture';
+	import TachographsLegalizationImage from '$assets/services/legalizacja-tachografow/main.jpg?w=750&format=avif;webp;jpg&as=picture';
 	import Image from '$components/custom/Util/image.svelte';
 	import { services } from '$lib/constants';
 
