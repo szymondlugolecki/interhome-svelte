@@ -54,7 +54,6 @@
 	} satisfies google.maps.MapOptions;
 
 	onMount(() => {
-		console.log('api key', env.PUBLIC_GOOGLE_MAPS_API_KEY);
 		const loader = new Loader({
 			apiKey: env.PUBLIC_GOOGLE_MAPS_API_KEY,
 			version: 'weekly'
