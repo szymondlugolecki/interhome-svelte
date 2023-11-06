@@ -14,6 +14,7 @@
 
 	import { Loader } from '@googlemaps/js-api-loader';
 	import { env } from '$env/dynamic/public';
+	import OfferServiceDescription from './(components)/offer-service-description.svelte';
 
 	const serviceEntries = Object.entries(services) as [
 		keyof typeof services,
@@ -133,8 +134,11 @@
 		class="relative flex flex-col items-center justify-center h-screen max-w-2xl px-0 mx-auto text-center gap-y-1"
 	>
 		<h1 class="text-5xl font-bold tracking-tight text-white uppercase sm:text-7xl">Interhome</h1>
-		<p class="max-w-sm px-4 text-lg text-white sm:text-xl">
-			Centrum Motoryzacji. Mechanika. Hamownia. Regeneracja turbosprężarek
+		<p class="max-w-sm px-4 text-xl font-medium text-white sm:text-2xl">Centrum motoryzacji</p>
+		<p class="max-w-lg px-4 text-lg text-white sm:text-xl">
+			Mechanika Pojazdowa. Regeneracja Turbosprężarek
+			<br />
+			Stacja Kontroli Pojazdów. Legalizacja Tachografów
 		</p>
 	</div>
 </section>
@@ -236,14 +240,7 @@
 					<dl class="flex flex-col gap-y-2">
 						<dt class="text-lg font-medium">{data.label}</dt>
 						<dd class="text-sm first-letter:text-base">
-							{data.description ||
-								`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in massa mauris. Nullam
-							porta dolor et efficitur lobortis. Praesent libero ex, bibendum et magna et, iaculis
-							molestie leo. Duis vestibulum lorem eget sollicitudin euismod. Class aptent taciti
-							sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin luctus,
-							metus sed suscipit vestibulum, ligula sem auctor mauris, vulputate malesuada turpis
-							leo et lectus. Donec tristique, nibh vel vehicula lobortis, turpis purus bibendum
-							odio, ut lacinia velit metus elementum neque.`}
+							<OfferServiceDescription {service} />
 						</dd>
 					</dl>
 					<div class="">

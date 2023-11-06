@@ -52,13 +52,13 @@
 </h1>
 <p class="leading-7">
 	Od ponad dwudziestu lat firma INTERHOME COMPANY prowadzi serwis tachografów. Priorytetem dla nas
-	jest świadczenie usług rzetelnie i na najwyższym poziomie. <br />Wykonujemy usługi w zakresie:
+	jest świadczenie usług rzetelnie i na najwyższym poziomie. <br />Oferowane przez nas usługi:
 </p>
 
 <ul class="ml-6 list-disc [&>li]:mt-1">
-	<li>naprawa, kalibracja i legalizacja tachografów analogowych</li>
-	<li>instalacja, kalibracja tachografów cyfrowych i inteligentnych</li>
-	<li>naprawy instalacji</li>
+	<li>naprawa, kalibracja i legalizacja tachografów analogowych,</li>
+	<li>instalacja, kalibracja tachografów cyfrowych i inteligentnych,</li>
+	<li>naprawy instalacji.</li>
 </ul>
 
 <p class="leading-7">
@@ -85,7 +85,7 @@
 	dotychczasowe przepisy odnoszące się między innymi do czasu jazdy i odpoczynków kierowców, sposobu
 	delegowania kierowców, sprawiedliwej konkurencji oraz tachografów, przeszkoliliśmy naszą kadrę
 	oraz wyposażyliśmy warsztat w przyrządy mające możliwość instalacji i kalibracji tachografów nowej
-	generacji..
+	generacji.
 </p>
 
 <div class="flex flex-col w-full py-6 gap-y-6">

@@ -1,0 +1,1 @@
+stamcja komtroli
