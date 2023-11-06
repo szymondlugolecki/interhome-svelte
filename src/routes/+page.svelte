@@ -190,7 +190,7 @@
 >
 	<!-- Filler div -->
 	<!-- When navigating to Offer, Header overlaps part of the text -->
-	<div class="w-full h-[84px]" />
+	<!-- <div class="w-full h-[84px]" /> -->
 
 	<div class="w-full py-6 text-center sm:py-16 bg-background/50">
 		<h3 class="text-3xl font-medium">Nasza oferta</h3>
@@ -257,7 +257,7 @@
 	class="flex flex-col items-center w-full px-8 py-10 text-center gap-y-6 sm:py-16 bg-background/50"
 	id="reviews"
 >
-	<div class="flex flex-col items-center justify-center py-6 gap-y-6 sm:py-32 lg:px-8 max-w-7xl">
+	<div class="flex flex-col items-center justify-center gap-y-6 lg:px-8 max-w-7xl">
 		<div class="text-center">
 			<h4 class="text-3xl font-medium">Opinie klientów</h4>
 		</div>
