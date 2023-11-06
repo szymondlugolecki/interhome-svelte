@@ -185,7 +185,7 @@
 <!-- Offer -->
 <section
 	id="oferta"
-	class="flex flex-col items-center justify-start w-full [&>*:nth-child(odd)]:bg-background/50 [&>*:nth-child(even)]:bg-background"
+	class="flex flex-col items-center justify-start w-full [&>*:nth-child(odd)]:bg-background/50 [&>*:nth-child(even)]:bg-background py-6"
 >
 	<!-- Filler div -->
 	<!-- When navigating to Offer, Header overlaps part of the text -->
