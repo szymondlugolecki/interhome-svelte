@@ -143,41 +143,6 @@
 	</div>
 </section>
 
-<section
-	class="flex justify-center w-full px-8 py-24 overflow-hidden isolate sm:py-32 lg:px-8"
-	id="godziny-otwarcia"
->
-	<div class="w-full max-w-7xl">
-		<div class="w-full py-10 text-center sm:py-16 bg-background/50">
-			<h2 class="text-3xl font-medium">Godziny otwarcia</h2>
-		</div>
-		<div class="grid grid-cols-1 justify-items-center sm:grid-cols-2 gap-y-12">
-			<dl class="flex flex-col gap-y-3">
-				<OpenStatus open={motorizationOpen} />
-				<dt class="text-lg font-medium">Centrum motoryzacji</dt>
-				<dd class="text-sm text-muted-foreground">
-					Poniedziałek - Piątek: {formatHour(openingHours.motorization.week.opens)} - {formatHour(
-						openingHours.motorization.week.closes
-					)}
-				</dd>
-			</dl>
-			<dl class="flex flex-col gap-y-3">
-				<OpenStatus open={stationOpen} />
-				<dt class="text-lg font-medium">Stacja kontroli pojazdów</dt>
-				<dd class="text-sm text-muted-foreground">
-					Poniedziałek - Piątek: {formatHour(openingHours.station.week.opens)} - {formatHour(
-						openingHours.station.week.closes
-					)}
-					<br />
-					Sobota: {formatHour(openingHours.station.saturday.opens)} - {formatHour(
-						openingHours.station.saturday.closes
-					)}
-				</dd>
-			</dl>
-		</div>
-	</div>
-</section>
-
 <!-- <section class="relative px-8 py-24 overflow-hidden isolate sm:py-32 lg:px-8" id="zaswiadczenie">
 	<div class="absolute inset-0 -z-10 opacity-10" />
 	<div class="max-w-2xl mx-auto lg:max-w-4xl">
@@ -250,6 +215,41 @@
 			</div>
 		</div>
 	{/each}
+</section>
+
+<section
+	class="flex justify-center w-full px-8 py-24 overflow-hidden isolate sm:py-32 lg:px-8"
+	id="godziny-otwarcia"
+>
+	<div class="w-full max-w-7xl">
+		<div class="w-full py-10 text-center sm:py-16 bg-background/50">
+			<h2 class="text-3xl font-medium">Godziny otwarcia</h2>
+		</div>
+		<div class="grid grid-cols-1 justify-items-center sm:grid-cols-2 gap-y-12">
+			<dl class="flex flex-col gap-y-3">
+				<OpenStatus open={motorizationOpen} />
+				<dt class="text-lg font-medium">Centrum motoryzacji</dt>
+				<dd class="text-sm text-muted-foreground">
+					Poniedziałek - Piątek: {formatHour(openingHours.motorization.week.opens)} - {formatHour(
+						openingHours.motorization.week.closes
+					)}
+				</dd>
+			</dl>
+			<dl class="flex flex-col gap-y-3">
+				<OpenStatus open={stationOpen} />
+				<dt class="text-lg font-medium">Stacja kontroli pojazdów</dt>
+				<dd class="text-sm text-muted-foreground">
+					Poniedziałek - Piątek: {formatHour(openingHours.station.week.opens)} - {formatHour(
+						openingHours.station.week.closes
+					)}
+					<br />
+					Sobota: {formatHour(openingHours.station.saturday.opens)} - {formatHour(
+						openingHours.station.saturday.closes
+					)}
+				</dd>
+			</dl>
+		</div>
+	</div>
 </section>
 
 <!-- Reviews -->
