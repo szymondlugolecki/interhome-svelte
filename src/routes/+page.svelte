@@ -131,20 +131,15 @@
 		/>
 	</div>
 	<div
-		class="relative flex flex-col items-center justify-center h-screen max-w-2xl px-0 mx-auto text-center gap-y-1"
+		class="relative flex flex-col items-center justify-center h-screen max-w-2xl px-0 mx-auto text-center gap-y-1.5"
 	>
-		<h1 class="text-5xl font-bold tracking-tight text-white uppercase sm:text-7xl">Interhome</h1>
-		<div
-			class="max-w-sm px-1 text-lg font-medium tracking-normal text-white sm:max-w-lg sm:text-xl"
+		<h1
+			class="text-5xl font-bold tracking-tight text-white uppercase sm:text-7xl animate__bounceIn"
 		>
-			<div class="inline-block">
-				<span class="block sm:inline">Mechanika pojazdowa.</span>
-				<span class="block sm:inline">Regeneracja turbosprężarek.</span>
-			</div>
-			<div class="inline-block">
-				<span class="block sm:inline">Stacja kontroli pojazdów.</span>
-				<span class="block sm:inline">Legalizacja tachografów</span>
-			</div>
+			Interhome
+		</h1>
+		<div class="text-2xl font-semibold text-white sm:text-3xl animate__fadeIn">
+			Centrum Motoryzacji
 		</div>
 	</div>
 </section>
@@ -192,12 +187,8 @@
 <!-- Offer -->
 <section
 	id="oferta"
-	class="flex flex-col items-center justify-start w-full [&>*:nth-child(odd)]:bg-background/50 [&>*:nth-child(even)]:bg-background py-6"
+	class="scroll-m-20 flex flex-col items-center justify-start w-full [&>*:nth-child(odd)]:bg-background/50 [&>*:nth-child(even)]:bg-background py-6"
 >
-	<!-- Filler div -->
-	<!-- When navigating to Offer, Header overlaps part of the text -->
-	<!-- <div class="w-full h-[84px]" /> -->
-
 	<div class="w-full py-6 text-center sm:py-16 bg-background/50">
 		<h2 class="text-3xl font-medium">Nasza oferta</h2>
 	</div>
@@ -224,16 +215,16 @@
 </section>
 
 <section
-	class="flex justify-center w-full px-8 py-24 overflow-hidden isolate sm:py-32 lg:px-8"
+	class="flex justify-center w-full px-8 py-24 overflow-hidden scroll-m-20 isolate sm:py-32 lg:px-8"
 	id="godziny-otwarcia"
 >
 	<div class="w-full max-w-7xl">
-		<div class="w-full py-10 text-center sm:py-16 bg-background/50">
+		<div class="w-full py-10 text-center sm:py-24 bg-background/50">
 			<h3 class="text-3xl font-medium">Godziny otwarcia</h3>
 		</div>
 		<div class="grid grid-cols-1 justify-items-center sm:grid-cols-2 gap-y-12">
 			<dl class="flex flex-col gap-y-3">
-				<dt class="text-lg font-medium">
+				<dt class="text-2xl font-medium">
 					<OpenStatus open={motorizationOpen} />
 					Centrum motoryzacji
 				</dt>
@@ -244,7 +235,7 @@
 				</dd>
 			</dl>
 			<dl class="flex flex-col gap-y-3">
-				<dt class="text-lg font-medium">
+				<dt class="text-2xl font-medium">
 					<OpenStatus open={stationOpen} />
 					Stacja kontroli pojazdów
 				</dt>
@@ -264,8 +255,8 @@
 
 <!-- Reviews -->
 <section
-	class="flex flex-col items-center w-full px-8 py-10 text-center gap-y-6 sm:py-16 bg-background/50"
-	id="reviews"
+	class="flex flex-col items-center w-full px-8 py-10 text-center scroll-m-20 gap-y-6 sm:py-16 bg-background/50"
+	id="opinie"
 >
 	<div class="flex flex-col items-center justify-center gap-y-6 lg:px-8 max-w-7xl">
 		<div class="text-center">
@@ -298,13 +289,9 @@
 
 <!-- Contact -->
 <section
-	class="flex flex-col items-center w-full px-8 py-10 text-center gap-y-6 sm:py-16 bg-background/50"
+	class="flex flex-col items-center w-full px-8 py-10 text-center scroll-auto scroll-m-20 gap-y-6 sm:py-16 bg-background/50"
 	id="kontakt"
 >
-	<!-- Filler div -->
-	<!-- When navigating to Contact, Header overlaps part of the text -->
-	<div class="w-full h-[84px]" />
-
 	<h5 class="text-3xl font-medium">Dane kontaktowe</h5>
 
 	<address class="flex flex-col sm:flex-row gap-x-24 gap-y-6">

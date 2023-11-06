@@ -12,7 +12,7 @@
 <div class={cn('flex flex-col items-start gap-y-3', className)}>
 	<span class="select-none">{'⭐'.repeat(stars)}</span>
 	<figure class="flex flex-col text-left gap-y-3">
-		<blockquote class="text-lg italic leading-7">
+		<blockquote class="text-[17px] italic leading-7">
 			<p>
 				“{review}“
 			</p>
