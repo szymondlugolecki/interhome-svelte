@@ -61,7 +61,7 @@
 
 <div class="flex justify-center w-full min-h-screen pt-24 pb-12">
 	<div class="max-w-3xl px-8 sm:px-12 lg:max-w-7xl">
-		<div class="grid w-full grid-cols-2 grid-rows-2 gap-4 xl:grid-cols-3">
+		<div class="grid w-full grid-cols-1 grid-rows-2 gap-4 xl:grid-cols-3">
 			<!-- <div class="flex w-full max-w-3xl px-8 pt-24 pb-12 sm:pb-24 sm:px-12 lg:max-w-7xl gap-x-12"> -->
 			<div class="flex flex-col col-span-2 row-span-2 gap-y-4">
 				<div class="flex flex-col flex-1 gap-y-3">
@@ -87,7 +87,9 @@
 					</p>
 				</div>
 
-				<div class="overflow-hidden duration-700 animate-in fade-in-0 slide-in-from-top-48 h-96">
+				<div
+					class="hidden overflow-hidden duration-700 animate-in fade-in-0 slide-in-from-top-48 h-96 xl:block"
+				>
 					<Image
 						class="object-cover object-center w-full h-full"
 						loading="eager"
@@ -98,7 +100,7 @@
 			</div>
 
 			<div
-				class="row-span-2 w-[24rem] animate-in fade-in-0 slide-in-from-top-48 duration-700 overflow-hidden hidden xl:flex"
+				class="row-span-2 w-[16rem] sm:w-[24rem] animate-in fade-in-0 slide-in-from-top-48 duration-700 overflow-hidden"
 			>
 				<Image
 					class="object-cover object-center w-full h-full"

@@ -134,8 +134,7 @@
 		class="relative flex flex-col items-center justify-center h-screen max-w-2xl px-0 mx-auto text-center gap-y-1"
 	>
 		<h1 class="text-5xl font-bold tracking-tight text-white uppercase sm:text-7xl">Interhome</h1>
-		<p class="max-w-sm px-4 text-xl font-medium text-white sm:text-2xl">Centrum motoryzacji</p>
-		<p class="max-w-lg px-4 text-lg text-white sm:text-xl">
+		<p class="max-w-sm px-1 text-lg font-medium tracking-normal text-white sm:max-w-lg sm:text-xl">
 			Mechanika Pojazdowa. Regeneracja Turbosprężarek
 			<br />
 			Stacja Kontroli Pojazdów. Legalizacja Tachografów
