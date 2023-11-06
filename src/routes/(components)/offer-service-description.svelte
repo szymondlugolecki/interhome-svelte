@@ -36,9 +36,7 @@
 		<li>naprawa instalacji.</li>
 	</ul>
 {:else if service === 'turbocharger-regeneration'}
-	Oferujemy profesjonalną regenerację turbosprężarek dla maszyn budowlanych, rolniczych i samochodów
-	ciężarowych. Nasze doświadczone zespoły ekspertów skutecznie naprawią nawet poważne uszkodzenia,
-	oferując znacznie tańszą alternatywę niż zakup nowego podzespołu. Przyjmujemy turbosprężarki z
-	Ciechanowa i okolic, zapewniając bezpłatny odbiór i dostawę po naprawie. Nasza regeneracja
-	obejmuje montaż, regulację parametrów oraz oferuje 24-miesięczną gwarancję bez limitu kilometrów.
+	Nasza firma specjalizuje się w kompleksowej regeneracji turbosprężarek do samochodów osobowych,
+	ciężarowych, maszyn rolniczych oraz budowlanych. Realizujemy naprawy nawet najpoważniejszych
+	uszkodzeń, oferując znacząco tańsze rozwiązanie od zakupu nowego podzespołu.
 {/if}

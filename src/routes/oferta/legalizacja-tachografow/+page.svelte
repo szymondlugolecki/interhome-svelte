@@ -9,6 +9,9 @@
 		TimelineOppositeContent
 	} from 'svelte-vertical-timeline';
 
+	import MasonryGallery from '$routes/galeria/(components)/masonry-gallery.svelte';
+	import tachographsImages from '$lib/images/tachographs';
+
 	const timelineOptions = [
 		{
 			title:
@@ -31,11 +34,6 @@
 			time: '01.06.2026'
 		}
 	];
-
-	import tachografs from '$lib/images/tachographs';
-	import MasonryGallery from '$routes/galeria/(components)/masonry-gallery.svelte';
-
-	const items = [...tachografs];
 </script>
 
 <h1 class="text-4xl font-extrabold tracking-tight scroll-m-20 lg:text-5xl">
@@ -108,6 +106,6 @@
 	<h4 class="text-2xl font-semibold tracking-tight scroll-m-20">Galeria</h4>
 
 	<div class="w-full max-w-7xl">
-		<MasonryGallery {items} />
+		<MasonryGallery items={tachographsImages} />
 	</div>
 </div>

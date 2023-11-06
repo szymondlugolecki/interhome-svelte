@@ -7,17 +7,8 @@
 	import { cn } from '$lib/utils';
 	import { Button } from '$components/ui/button';
 	import { services } from '$lib/constants';
-	import { Menu } from 'lucide-svelte';
 
-	import { createPopover } from '@melt-ui/svelte';
 	import MobileHeader from './mobile-header.svelte';
-
-	const {
-		elements: { trigger, content, arrow, close },
-		states: { open }
-	} = createPopover({
-		forceVisible: true
-	});
 
 	$: activeUrl = $page.url.pathname;
 </script>
@@ -54,9 +45,11 @@
 				</PopoverTrigger>
 				<PopoverContent class="w-48">
 					<div class="grid gap-y-5">
-						{#each Object.entries(services) as [_, info]}
+						{#each Object.entries(services) as [service, info]}
 							<Button variant="link" href={info.url} class="whitespace-break-spaces"
-								>{info.label}</Button
+								>{service === 'district-vehicle-inspection-station'
+									? 'Okręgowa stacja kontroli pojazdów'
+									: info.label}</Button
 							>
 						{/each}
 					</div>

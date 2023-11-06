@@ -1,3 +1,8 @@
+<script lang="ts">
+	import MasonryGallery from '$routes/galeria/(components)/masonry-gallery.svelte';
+	import vehicleMechanicsImages from '$lib/images/vehicle-mechanics';
+</script>
+
 <h1 class="text-4xl font-extrabold tracking-tight scroll-m-20 lg:text-5xl">Serwis Interhome</h1>
 <p class="leading-7">
 	Serwis INTERHOME świadczy kompleksowe usługi w zakresie napraw samochodów wszystkich typów i
@@ -109,5 +114,13 @@
 		<ul class="ml-6 list-disc [&>li]:mt-1">
 			<li>Komputerowe ustawienie geometrii kół 3D</li>
 		</ul>
+	</div>
+</div>
+
+<div class="flex flex-col w-full py-6 gap-y-6">
+	<h3 class="text-2xl font-semibold tracking-tight scroll-m-20">Galeria</h3>
+
+	<div class="w-full max-w-7xl">
+		<MasonryGallery items={vehicleMechanicsImages} />
 	</div>
 </div>

@@ -1,14 +1,22 @@
 <script lang="ts">
-	// General
-	// Lobby
-
-	// Tachografs
-	import tachographImages from '$lib/images/tachographs';
+	// Images
+	import generalImages from '$lib/images/general';
 	import lobbyImages from '$lib/images/lobby';
+	import vehicleMechanicsImages from '$lib/images/vehicle-mechanics';
+	import turbochargersImages from '$lib/images/turbochargers';
+	import inspectionStationImages from '$lib/images/inspection-station';
+	import tachographImages from '$lib/images/tachographs';
 
 	import MasonryGallery from './(components)/masonry-gallery.svelte';
 
-	const items = [...lobbyImages, ...tachographImages];
+	const items = [
+		...generalImages,
+		...lobbyImages,
+		...vehicleMechanicsImages,
+		...turbochargersImages,
+		...inspectionStationImages,
+		...tachographImages
+	];
 </script>
 
 <div class="flex flex-col items-center min-h-screen pt-24 pb-12 gap-y-6">

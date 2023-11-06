@@ -1,3 +1,8 @@
+<script lang="ts">
+	import MasonryGallery from '$routes/galeria/(components)/masonry-gallery.svelte';
+	import inspectionStationImages from '$lib/images/inspection-station';
+</script>
+
 <h1 class="text-4xl font-extrabold tracking-tight scroll-m-20 lg:text-5xl">
 	Okręgowa Stacja Kontroli Pojazdów WCI 008
 </h1>
@@ -36,4 +41,12 @@
 			</ul>
 		</li>
 	</ul>
+</div>
+
+<div class="flex flex-col w-full py-6 gap-y-6">
+	<h2 class="text-2xl font-semibold tracking-tight scroll-m-20">Galeria</h2>
+
+	<div class="w-full max-w-7xl">
+		<MasonryGallery items={inspectionStationImages} />
+	</div>
 </div>
