@@ -32,7 +32,7 @@
 		}
 	];
 
-	import tachografs from '$lib/images/tachografs';
+	import tachografs from '$lib/images/tachographs';
 	import MasonryGallery from '$routes/galeria/(components)/masonry-gallery.svelte';
 
 	const items = [...tachografs];

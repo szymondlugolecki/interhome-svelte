@@ -3,11 +3,12 @@
 	// Lobby
 
 	// Tachografs
-	import tachografs from '$lib/images/tachografs';
+	import tachographImages from '$lib/images/tachographs';
+	import lobbyImages from '$lib/images/lobby';
 
 	import MasonryGallery from './(components)/masonry-gallery.svelte';
 
-	const items = [...tachografs];
+	const items = [...lobbyImages, ...tachographImages];
 </script>
 
 <div class="flex flex-col items-center min-h-screen pt-24 pb-12 gap-y-6">
