@@ -25,11 +25,7 @@
 	osobowych, dostawczych jak i ciężarowych. Naszą dewizą jest fachowość i rzetelność w podejściu do
 	klienta. Wykwalifikowany zespół pracowników i odpowiednio wyposażony warsztat stanowią podstawę
 	usług świadczonych na najwyższym poziomie. Nasza wieloletnia praktyka związana z naprawami
-	pojazdów czyni nas fachowcami w branży motoryzacyjnej. Wszystkie naprawy, które realizujemy w
-	naszym serwisie przebiegają zgodnie z zaleceniami producentów pojazdów. Naprawy samochodów zawsze
-	wykonywane są z wykorzystaniem najlepszej jakości części zamiennych i najnowocześniejszej
-	technologii. W trosce o czas naszych klientów, proponujemy możliwie krótkie terminy realizacji
-	usług. Dbamy o to aby naprawy były wykonywane na czas.
+	pojazdów czyni nas fachowcami w branży motoryzacyjnej.
 {:else if service === 'tachographs-legalization'}
 	Od ponad dwudziestu lat firma INTERHOME COMPANY prowadzi serwis tachografów. Priorytetem dla nas
 	jest świadczenie usług rzetelnie i na najwyższym poziomie. Oferowane przez nas usługi:
