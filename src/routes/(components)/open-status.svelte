@@ -4,7 +4,7 @@
 	export let open: boolean;
 </script>
 
-<div>
+<div class="pb-3">
 	<span
 		class={cn(
 			'relative inline-block text-xl italic font-semibold text-center before:block before:absolute before:-inset-1.5 before:-skew-y-3',

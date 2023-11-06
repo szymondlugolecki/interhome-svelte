@@ -192,7 +192,7 @@
 	<!-- <div class="w-full h-[84px]" /> -->
 
 	<div class="w-full py-6 text-center sm:py-16 bg-background/50">
-		<h3 class="text-3xl font-medium">Nasza oferta</h3>
+		<h2 class="text-3xl font-medium">Nasza oferta</h2>
 	</div>
 	{#each serviceEntries as [service, data]}
 		<div class="flex justify-center w-full group/service">
@@ -222,12 +222,14 @@
 >
 	<div class="w-full max-w-7xl">
 		<div class="w-full py-10 text-center sm:py-16 bg-background/50">
-			<h2 class="text-3xl font-medium">Godziny otwarcia</h2>
+			<h3 class="text-3xl font-medium">Godziny otwarcia</h3>
 		</div>
 		<div class="grid grid-cols-1 justify-items-center sm:grid-cols-2 gap-y-12">
 			<dl class="flex flex-col gap-y-3">
-				<OpenStatus open={motorizationOpen} />
-				<dt class="text-lg font-medium">Centrum motoryzacji</dt>
+				<dt class="text-lg font-medium">
+					<OpenStatus open={motorizationOpen} />
+					Centrum motoryzacji
+				</dt>
 				<dd class="text-sm text-muted-foreground">
 					Poniedziałek - Piątek: {formatHour(openingHours.motorization.week.opens)} - {formatHour(
 						openingHours.motorization.week.closes
@@ -235,8 +237,10 @@
 				</dd>
 			</dl>
 			<dl class="flex flex-col gap-y-3">
-				<OpenStatus open={stationOpen} />
-				<dt class="text-lg font-medium">Stacja kontroli pojazdów</dt>
+				<dt class="text-lg font-medium">
+					<OpenStatus open={stationOpen} />
+					Stacja kontroli pojazdów
+				</dt>
 				<dd class="text-sm text-muted-foreground">
 					Poniedziałek - Piątek: {formatHour(openingHours.station.week.opens)} - {formatHour(
 						openingHours.station.week.closes
