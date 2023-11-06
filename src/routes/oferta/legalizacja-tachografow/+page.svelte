@@ -9,10 +9,6 @@
 		TimelineOppositeContent
 	} from 'svelte-vertical-timeline';
 
-	import PhotoSwipeGallery from 'svelte-photoswipe';
-	import type { GalleryItem } from 'svelte-photoswipe';
-	// import Tachographs1 from '$assets/services/legalizacja-tachografow/1.jpg?w=750&format=avif;webp;jpg&as=picture';
-
 	const timelineOptions = [
 		{
 			title:
@@ -36,15 +32,10 @@
 		}
 	];
 
-	const images: GalleryItem[] = [];
-	images.push({
-		src: '/legalizacja-tachografow/1.png',
-		width: 3000,
-		height: 4000,
-		alt: 'Photo', // optional
-		cropped: false, // optional, default=false; see https://photoswipe.com/v5/docs/
-		thumbnail: { src: '/legalizacja-tachografow/1.png', width: 300, height: 400 }
-	});
+	import tachografs from '$lib/images/tachografs';
+	import MasonryGallery from '$routes/galeria/(components)/masonry-gallery.svelte';
+
+	const items = [...tachografs];
 </script>
 
 <h1 class="text-4xl font-extrabold tracking-tight scroll-m-20 lg:text-5xl">
@@ -113,6 +104,10 @@
 	</div>
 </div>
 
-<div class="flex w-full py-6">
-	<PhotoSwipeGallery {images} styling="flex" />
+<div class="flex flex-col w-full py-6 gap-y-6">
+	<h4 class="text-2xl font-semibold tracking-tight scroll-m-20">Galeria</h4>
+
+	<div class="w-full max-w-7xl">
+		<MasonryGallery {items} />
+	</div>
 </div>
