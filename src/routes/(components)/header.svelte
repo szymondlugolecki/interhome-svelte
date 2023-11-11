@@ -2,7 +2,7 @@
 	import { Popover, PopoverTrigger, PopoverContent } from '$lib/components/ui/popover';
 	import Image from '$components/custom/Util/image.svelte';
 	import Logo from '$assets/interhome.png?w=500&format=avif;webp;jpg&as=picture';
-	import Logotype from '$assets/interhome3.png?w=500&format=avif;webp;jpg&as=picture';
+	// import Logotype from '$assets/interhome3.png?w=500&format=avif;webp;jpg&as=picture';
 	import { page } from '$app/stores';
 	import { cn } from '$lib/utils';
 	import { Button } from '$components/ui/button';
@@ -19,12 +19,12 @@
 	>
 		<div class="flex">
 			<a href="/">
-				<div class="hidden sm:flex">
-					<Image meta={Logo} alt="interhome logo" sizes="180px" />
-				</div>
-				<div class="flex sm:hidden">
+				<!-- <div class="hidden sm:flex"> -->
+				<Image meta={Logo} alt="interhome logo" sizes="180px" />
+				<!-- </div> -->
+				<!-- <div class="flex sm:hidden">
 					<Image meta={Logotype} alt="interhome logo" sizes="32px" />
-				</div>
+				</div> -->
 			</a>
 		</div>
 		<div class="items-center justify-center hidden py-6 font-medium sm:flex gap-x-6">
