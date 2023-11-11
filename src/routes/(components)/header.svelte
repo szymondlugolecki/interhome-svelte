@@ -67,7 +67,7 @@
 				)}
 				href="/o-nas">O nas</a
 			>
-			<a class="transition-colors hover:text-blue-600" href="/#kontakt">Kontakt</a>
+			<a class="transition-colors hover:text-blue-600" href="/kontakt">Kontakt</a>
 			<a class="transition-colors hover:text-blue-600" href="/galeria">Galeria</a>
 		</div>
 		<div class="py-[1.5rem] sm:hidden">

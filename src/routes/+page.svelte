@@ -46,34 +46,7 @@
 		}
 	};
 
-	const mapOptions = {
-		center: {
-			lat: 52.866647,
-			lng: 20.602871
-		},
-		zoom: 18
-	} satisfies google.maps.MapOptions;
-
 	onMount(() => {
-		const loader = new Loader({
-			apiKey: env.PUBLIC_GOOGLE_MAPS_API_KEY,
-			version: 'weekly'
-		});
-
-		const mapElement = document.getElementById('mapa');
-
-		if (mapElement) {
-			loader
-				.importLibrary('maps')
-				.then(({ Map }) => {
-					new Map(mapElement, mapOptions);
-				})
-				.catch((e) => {
-					// do something
-					console.error(e);
-				});
-		}
-
 		// Update the time every minute
 		const interval = setInterval(() => {
 			time = new Date();
@@ -219,11 +192,11 @@
 	id="godziny-otwarcia"
 >
 	<div class="w-full max-w-7xl">
-		<div class="w-full py-10 text-center sm:py-24 bg-background/50">
+		<div class="w-full py-12 text-center sm:py-24 bg-background/50">
 			<h3 class="text-3xl font-medium">Godziny otwarcia</h3>
 		</div>
 		<div class="grid grid-cols-1 justify-items-center sm:grid-cols-2 gap-y-12">
-			<dl class="flex flex-col gap-y-3">
+			<dl class="flex flex-col text-center sm:text-start gap-y-3">
 				<dt class="text-2xl font-medium">
 					<OpenStatus open={motorizationOpen} />
 					Centrum motoryzacji
@@ -234,7 +207,7 @@
 					)}
 				</dd>
 			</dl>
-			<dl class="flex flex-col gap-y-3">
+			<dl class="flex flex-col text-center gap-y-3 sm:text-start">
 				<dt class="text-2xl font-medium">
 					<OpenStatus open={stationOpen} />
 					Stacja kontroli pojazdów
@@ -255,14 +228,14 @@
 
 <!-- Reviews -->
 <section
-	class="flex flex-col items-center w-full px-8 py-10 text-center scroll-m-20 gap-y-6 sm:py-16 bg-background/50"
+	class="flex flex-col items-center w-full px-8 py-16 text-center scroll-m-20 gap-y-6 sm:py-24 bg-background/50"
 	id="opinie"
 >
 	<div class="flex flex-col items-center justify-center gap-y-6 lg:px-8 max-w-7xl">
 		<div class="text-center">
 			<h4 class="text-3xl font-medium">Opinie klientów</h4>
 		</div>
-		<div class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-6">
+		<div class="grid items-start grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-6">
 			<Review
 				review="Zleciłem przegląd auta z wymianą oleju silnikowego i kompletu filtrów w Audi Q7.
 			Usługa wykonana sprawnie i profesjonalnie. Polecam."
@@ -288,7 +261,7 @@
 </section>
 
 <!-- Contact -->
-<section
+<!-- <section
 	class="flex flex-col items-center w-full px-8 py-10 text-center scroll-auto scroll-m-20 gap-y-6 sm:py-16 bg-background/50"
 	id="kontakt"
 >
@@ -307,24 +280,4 @@
 			<span><a href="mailto:office@interhome.com.pl"> office@interhome.com.pl </a></span>
 		</div>
 	</address>
-</section>
-
-<!-- Map -->
-<section
-	class="flex flex-col items-center w-full px-8 pb-10 text-center gap-y-6 sm:pb-16 bg-background/50"
-	id="map"
->
-	<div class="flex justify-center w-full overflow-x-auto rounded-lg">
-		<div id="mapa" class="w-[1216px] h-[450px]" />
-		<!-- <iframe
-			title="Mapa dojazdu do Interhome"
-			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2408.542285868978!2d20.6028713!3d52.8666473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471c2ec13d0ccdc1%3A0xd22ced45baf77712!2sMazowiecka%206%2C%2006-400%20Ciechan%C3%B3w!5e0!3m2!1spl!2spl!4v1689539529109!5m2!1spl!2spl"
-			width="1216"
-			height="450"
-			class="border-0 rounded-lg"
-			allowFullScreen={true}
-			loading="lazy"
-			referrerPolicy="no-referrer-when-downgrade"
-		/> -->
-	</div>
-</section>
+</section> -->

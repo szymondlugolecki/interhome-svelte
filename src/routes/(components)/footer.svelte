@@ -12,7 +12,7 @@
 		<a href="/zasady-uzytkowania" class="hover:underline focus-visible:underline"
 			>Zasady użytkowania</a
 		>
-		<a href="/#kontakt" class="hover:underline focus-visible:underline">Kontakt</a>
+		<a href="/kontakt" class="hover:underline focus-visible:underline">Kontakt</a>
 	</div>
 	<div
 		class="flex flex-col items-center pt-6 border-t gap-y-8 sm:flex-row-reverse sm:items-center sm:justify-between border-border"

@@ -22,7 +22,7 @@
 
 <div>
 	<p class="leading-7">
-		Zapewniamy klientom 24-miesięczną gwarancję bez ograniczenia kilometrów, co świadczy o naszym
+		Zapewniamy klientom 12-miesięczną gwarancję bez limitu kilometrów, co świadczy o naszym
 		przekonaniu co do najwyższej jakości świadczonych usług.
 	</p>
 	<p class="leading-7">

@@ -33,7 +33,7 @@
 				class={cn('transition-colors', activeUrl.startsWith('/o-nas') && 'text-blue-600')}
 				href="/o-nas">O nas</a
 			>
-			<a class="transition-colors" href="/#kontakt">Kontakt</a>
+			<a class="transition-colors" href="/kontakt">Kontakt</a>
 			<a class="transition-colors" href="/galeria">Galeria</a>
 		</div>
 	</div>
