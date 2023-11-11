@@ -75,7 +75,7 @@
 		<!-- Map -->
 		<section
 			class="flex flex-col items-center w-full px-8 pb-10 text-center gap-y-6 sm:pb-16 bg-background/50"
-			id="map"
+			id="mapa"
 		>
 			<div class="flex justify-center w-full overflow-x-auto rounded-lg">
 				<div id="mapa" class="w-[1216px] h-[450px]" />
