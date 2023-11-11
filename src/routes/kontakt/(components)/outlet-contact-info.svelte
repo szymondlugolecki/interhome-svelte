@@ -4,10 +4,10 @@
 </script>
 
 <div>
-	<dt class="font-medium">{title}</dt>
+	<dt class="text-base font-medium">{title}</dt>
 	<dd>
 		{#each phones as phone}
-			<a class="block" href="tel:+48 {phone}">{phone}</a>
+			<a class="block text-sm" href="tel:+48 {phone}">{phone}</a>
 		{/each}
 	</dd>
 </div>

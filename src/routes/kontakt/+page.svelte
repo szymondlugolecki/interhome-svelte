@@ -74,9 +74,17 @@
 
 		<!-- Map -->
 		<section
-			class="flex flex-col items-center w-full px-8 pb-10 text-center gap-y-6 sm:pb-16 bg-background/50"
-			id="mapa"
+			class="flex flex-col items-center w-full pb-10 text-center gap-y-6 sm:pb-16 bg-background/50"
+			id="address"
 		>
+			<div class="flex flex-col gap-y-3">
+				<h2 class="text-3xl font-medium">Gdzie nas znaleźć</h2>
+				<address id="adres" class="flex flex-col text-left">
+					<span class="font-medium">Interhome Centrum Motoryzacji</span>
+					<span>Mazowiecka 6</span>
+					<span>06-400 Ciechanów</span>
+				</address>
+			</div>
 			<div class="flex justify-center w-full overflow-x-auto rounded-lg">
 				<div id="map" class="w-[1216px] h-[450px]" />
 				<!-- <iframe
