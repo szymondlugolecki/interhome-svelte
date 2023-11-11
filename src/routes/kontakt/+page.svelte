@@ -4,6 +4,7 @@
 
 	import { Loader } from '@googlemaps/js-api-loader';
 	import { env } from '$env/dynamic/public';
+	import { Separator } from '$lib/components/ui/separator';
 
 	const mapOptions = {
 		center: {
@@ -59,35 +60,40 @@
 	<meta name="description" content="Interhome" />
 </svelte:head>
 
-<div class="flex flex-col w-full min-h-screen pt-24 gap-y-12">
-	<main
-		class="flex flex-col items-center w-full px-8 text-center scroll-auto scroll-m-20 gap-y-6 bg-background/50"
-		id="kontakt"
-	>
-		<h1 class="text-4xl font-medium">Dane kontaktowe</h1>
-
-		<div class="grid grid-cols-2 gap-4 md:grid-cols-4">
-			{#each outletContactInfo as { title, phones }}
-				<OutletContactInfo {title} {phones} />
-			{/each}
-		</div>
-
-		<!-- Map -->
-		<section
-			class="flex flex-col items-center w-full pb-10 text-center gap-y-6 sm:pb-16 bg-background/50"
-			id="address"
+<div class="flex flex-col items-center w-full min-h-screen pt-24">
+	<div class="flex flex-col w-full px-8 sm:px-12 lg:max-w-7xl gap-y-12">
+		<main
+			class="flex flex-col items-center w-full text-center scroll-auto scroll-m-20 gap-y-6 bg-background/50"
+			id="kontakt"
 		>
-			<div class="flex flex-col gap-y-3">
-				<h2 class="text-3xl font-medium">Gdzie nas znaleźć</h2>
-				<address id="adres" class="flex flex-col text-left">
-					<span class="font-medium">Interhome Centrum Motoryzacji</span>
-					<span>Mazowiecka 6</span>
-					<span>06-400 Ciechanów</span>
-				</address>
+			<h1 class="text-4xl font-medium">Dane kontaktowe</h1>
+
+			<div class="grid grid-cols-2 gap-4 md:grid-cols-4">
+				{#each outletContactInfo as { title, phones }}
+					<OutletContactInfo {title} {phones} />
+				{/each}
 			</div>
-			<div class="flex justify-center w-full overflow-x-auto rounded-lg">
-				<div id="map" class="w-[1216px] h-[450px]" />
-				<!-- <iframe
+
+			<div class="w-full max-w-4xl">
+				<Separator />
+			</div>
+
+			<!-- Map -->
+			<section
+				class="flex flex-col items-center w-full pb-10 text-center gap-y-6 sm:pb-16 bg-background/50"
+				id="address"
+			>
+				<div class="flex flex-col gap-y-3">
+					<h2 class="text-3xl font-medium">Gdzie nas znaleźć</h2>
+					<address id="adres" class="flex flex-col text-left">
+						<span class="font-medium">Interhome Centrum Motoryzacji</span>
+						<span>Mazowiecka 6</span>
+						<span>06-400 Ciechanów</span>
+					</address>
+				</div>
+				<div class="flex justify-center w-full overflow-x-auto rounded-lg">
+					<div id="map" class="w-[1216px] h-[450px]" />
+					<!-- <iframe
 					title="Mapa dojazdu do Interhome"
 					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2408.542285868978!2d20.6028713!3d52.8666473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471c2ec13d0ccdc1%3A0xd22ced45baf77712!2sMazowiecka%206%2C%2006-400%20Ciechan%C3%B3w!5e0!3m2!1spl!2spl!4v1689539529109!5m2!1spl!2spl"
 					width="1216"
@@ -97,7 +103,8 @@
 					loading="lazy"
 					referrerPolicy="no-referrer-when-downgrade"
 				/> -->
-			</div>
-		</section>
-	</main>
+				</div>
+			</section>
+		</main>
+	</div>
 </div>
