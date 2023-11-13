@@ -40,6 +40,7 @@
 		"@googlemaps/js-api-loader": "^1.16.2",
 		"@sveltejs/adapter-vercel": "^3.0.3",
 		"@tailwindcss/typography": "^0.5.10",
+		"@vercel/analytics": "^1.1.1",
 		"animate.css": "^4.1.1",
 		"bigger-picture": "^1.1.12",
 		"bits-ui": "^0.5.7",

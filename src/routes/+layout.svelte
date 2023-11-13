@@ -4,6 +4,10 @@
 	import Footer from '$routes/(components)/footer.svelte';
 	import ScrollToTop from '$components/custom/Util/scroll-to-top.svelte';
 
+	// Import the Analytics package, and the SvelteKit dev variable.
+	import { dev } from '$app/environment';
+	import { inject } from '@vercel/analytics';
+
 	import { inview } from 'svelte-inview';
 	import type { ObserverEventDetails } from 'svelte-inview';
 
@@ -11,6 +15,9 @@
 	const inViewChange = ({ detail }: CustomEvent<ObserverEventDetails>) => {
 		isInView = detail.inView;
 	};
+
+	// Inject the Analytics functionality
+	inject({ mode: dev ? 'development' : 'production' });
 </script>
 
 <div class="relative">
