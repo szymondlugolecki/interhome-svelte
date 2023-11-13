@@ -20,7 +20,7 @@
 		<div class="flex">
 			<a href="/">
 				<!-- <div class="hidden sm:flex"> -->
-				<Image meta={Logo} alt="interhome logo" sizes="180px" />
+				<Image meta={Logo} alt="interhome logo" sizes="180px" width="180px" height="53px" />
 				<!-- </div> -->
 				<!-- <div class="flex sm:hidden">
 					<Image meta={Logotype} alt="interhome logo" sizes="32px" />

@@ -19,6 +19,8 @@
 	export let sizes = '100vw';
 	export let alt = '';
 	export let loading: 'lazy' | 'eager' | null | undefined = 'lazy';
+	export let width: number | string | undefined | null = undefined;
+	export let height: number | string | undefined | null = undefined;
 	let className: string | undefined | null = undefined;
 
 	export { className as class };
@@ -32,5 +34,5 @@
 			srcset={srcMeta.map((m) => `${m.src} ${m.w}w`).join(', ')}
 		/>
 	{/each}
-	<img src={fallback.src} {alt} {loading} class={className} />
+	<img src={fallback.src} {alt} {loading} class={className} {width} {height} />
 </picture>
