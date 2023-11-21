@@ -20,6 +20,10 @@
 	inject({ mode: dev ? 'development' : 'production' });
 </script>
 
+<svelte:head>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</svelte:head>
+
 <div class="relative">
 	<div
 		class="absolute inset-0 h-screen -z-50"

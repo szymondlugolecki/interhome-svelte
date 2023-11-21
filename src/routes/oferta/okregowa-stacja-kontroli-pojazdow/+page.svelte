@@ -3,6 +3,14 @@
 	import inspectionStationImages from '$lib/images/inspection-station';
 </script>
 
+<svelte:head>
+	<title>Okręgowa Stacja Kontroli Pojazdów WCI 008 • Interhome</title>
+	<meta
+		name="description"
+		content="Oferujemy okresowe badania techniczne wszystkich pojazdów samochodowych, przyczep, naczep, ciągników rolniczych i motocykli i więcej."
+	/>
+</svelte:head>
+
 <h1 class="text-4xl font-extrabold tracking-tight scroll-m-20 lg:text-5xl">
 	Okręgowa Stacja Kontroli Pojazdów WCI 008
 </h1>

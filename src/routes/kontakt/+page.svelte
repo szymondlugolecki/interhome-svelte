@@ -57,7 +57,7 @@
 
 <svelte:head>
 	<title>Kontakt • Interhome</title>
-	<meta name="description" content="Interhome" />
+	<meta name="description" content="Kontakty do poszczególnych działów" />
 </svelte:head>
 
 <div class="flex flex-col items-center w-full min-h-screen pt-24">

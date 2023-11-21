@@ -36,6 +36,14 @@
 	];
 </script>
 
+<svelte:head>
+	<title>Legalizacja tachografów • Interhome</title>
+	<meta
+		name="description"
+		content="Od ponad dwudziestu lat firma INTERHOME COMPANY prowadzi serwis tachografów. Priorytetem dla nas jest świadczenie usług rzetelnie i na najwyższym poziomie."
+	/>
+</svelte:head>
+
 <h1 class="text-4xl font-extrabold tracking-tight scroll-m-20 lg:text-5xl">
 	Legalizacja tachografów
 </h1>

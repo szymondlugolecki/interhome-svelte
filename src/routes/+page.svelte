@@ -89,8 +89,8 @@
 </script>
 
 <svelte:head>
-	<title>Interhome</title>
-	<meta name="description" content="Interhome" />
+	<title>Start • Interhome</title>
+	<meta name="description" content="Strona startowa Interhome" />
 </svelte:head>
 
 <!-- Landing Page -->

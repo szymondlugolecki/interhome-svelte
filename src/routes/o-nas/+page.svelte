@@ -10,7 +10,7 @@
 
 <svelte:head>
 	<title>O nas • Interhome</title>
-	<meta name="description" content="Interhome" />
+	<meta name="description" content="Nasza historia i wartości." />
 </svelte:head>
 
 <!-- <div class="flex justify-center w-full min-h-screen">

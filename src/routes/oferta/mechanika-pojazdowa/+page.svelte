@@ -3,6 +3,15 @@
 	import vehicleMechanicsImages from '$lib/images/vehicle-mechanics';
 </script>
 
+<svelte:head>
+	<title>Serwis • Interhome</title>
+	<meta
+		name="description"
+		content="Świadczymy kompleksowe usługi w zakresie napraw samochodów wszystkich typów i
+		marek, zarówno osobowych, dostawczych jak i ciężarowych."
+	/>
+</svelte:head>
+
 <h1 class="text-4xl font-extrabold tracking-tight scroll-m-20 lg:text-5xl">Serwis Interhome</h1>
 <p class="leading-7">
 	Serwis INTERHOME świadczy kompleksowe usługi w zakresie napraw samochodów wszystkich typów i

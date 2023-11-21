@@ -40,14 +40,6 @@
 {/if}
 
 <style lang="postcss">
-	.input {
-		@apply flex h-8 w-full rounded-md border border-blue-800 bg-transparent px-2.5 text-sm;
-		@apply ring-offset-blue-300 focus-visible:ring;
-		@apply focus-visible:ring-blue-400 focus-visible:ring-offset-1;
-		@apply flex-1 items-center justify-center;
-		@apply px-2.5 text-sm leading-none text-blue-700;
-	}
-
 	.trigger {
 		@apply inline-flex h-9 w-9 items-center justify-center rounded-full p-0;
 		@apply text-sm font-medium transition-colors hover:bg-background/50;

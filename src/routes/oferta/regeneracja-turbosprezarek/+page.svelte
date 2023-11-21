@@ -3,6 +3,15 @@
 	import turbochargersImages from '$lib/images/turbochargers';
 </script>
 
+<svelte:head>
+	<title>Regenracja turbosprężarek • Interhome</title>
+	<meta
+		name="description"
+		content="Kompleksowa regeneracja turbosprężarek do samochodów osobowych,
+	ciężarowych, maszyn rolniczych oraz budowlanych."
+	/>
+</svelte:head>
+
 <h1 class="text-4xl font-extrabold tracking-tight scroll-m-20 lg:text-5xl">
 	Regeneracja turbosprężarek
 </h1>
