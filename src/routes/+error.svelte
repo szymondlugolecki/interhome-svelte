@@ -1,8 +1,6 @@
 <script>
 	import { page } from '$app/stores';
 
-	console.log($page.status, $page.error);
-
 	const httpStatusList = {
 		400: 'Nieprawidłowe żądanie',
 		401: 'Nieautoryzowany dostęp',

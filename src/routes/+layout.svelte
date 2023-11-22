@@ -32,7 +32,7 @@
 		on:inview_change={inViewChange}
 	/>
 	<Header />
-	<div class="pt-[84px] min-h-screen">
+	<div class="min-h-screen">
 		<slot />
 	</div>
 	<Footer />
