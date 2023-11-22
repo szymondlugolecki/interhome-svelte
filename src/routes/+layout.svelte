@@ -32,7 +32,9 @@
 		on:inview_change={inViewChange}
 	/>
 	<Header />
-	<slot />
+	<div class="pt-[84px] min-h-screen">
+		<slot />
+	</div>
 	<Footer />
 	{#if !isInView}
 		<ScrollToTop />
