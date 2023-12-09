@@ -63,12 +63,31 @@
 			<a
 				class={cn(
 					'transition-colors hover:text-blue-600',
+					activeUrl.startsWith('/praca') && 'text-blue-600'
+				)}
+				href="/praca">Praca</a
+			>
+			<a
+				class={cn(
+					'transition-colors hover:text-blue-600',
 					activeUrl.startsWith('/o-nas') && 'text-blue-600'
 				)}
 				href="/o-nas">O nas</a
 			>
-			<a class="transition-colors hover:text-blue-600" href="/kontakt">Kontakt</a>
-			<a class="transition-colors hover:text-blue-600" href="/galeria">Galeria</a>
+			<a
+				class={cn(
+					'transition-colors hover:text-blue-600',
+					activeUrl.startsWith('/kontakt') && 'text-blue-600'
+				)}
+				href="/kontakt">Kontakt</a
+			>
+			<a
+				class={cn(
+					'transition-colors hover:text-blue-600',
+					activeUrl.startsWith('/galeria') && 'text-blue-600'
+				)}
+				href="/galeria">Galeria</a
+			>
 		</div>
 		<div class="py-[1.5rem] sm:hidden">
 			<MobileHeader />
