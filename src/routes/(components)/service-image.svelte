@@ -3,6 +3,7 @@
 	import TurbochargerRegenerationImage from '$assets/services/regeneracja-turbosprezarek/main.jpg?w=750&format=avif;webp;jpg&as=picture';
 	import DistrictVehicleInspectionStationImage from '$assets/services/okregowa-stacja-kontroli-pojazdow/main.jpg?w=750&format=avif;webp;jpg&as=picture';
 	import TachographsLegalizationImage from '$assets/services/legalizacja-tachografow/main.jpg?w=750&format=avif;webp;jpg&as=picture';
+	import CarRentalImage from '$assets/services/wynajem-auta-zastepczego/main.jpeg?w=750&format=avif;webp;jpg&as=picture';
 	import Image from '$components/custom/Util/image.svelte';
 	import { services } from '$lib/constants';
 
@@ -58,6 +59,13 @@
 					class="object-cover object-center w-full h-full transition-transform group-hover/service:scale-105"
 					loading="lazy"
 					meta={TachographsLegalizationImage}
+					alt={services[service].label}
+				/>
+			{:else if service === 'car-rental'}
+				<Image
+					class="object-cover object-center w-full h-full transition-transform group-hover/service:scale-95"
+					loading="lazy"
+					meta={CarRentalImage}
 					alt={services[service].label}
 				/>
 			{/if}

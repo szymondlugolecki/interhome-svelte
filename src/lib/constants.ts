@@ -14,5 +14,9 @@ export const services = {
 	'tachographs-legalization': {
 		label: 'Legalizacja tachografów',
 		url: '/oferta/legalizacja-tachografow'
+	},
+	'car-rental': {
+		label: 'Wynajem auta zastępczego',
+		url: '/oferta/wynajem-auta-zastepczego'
 	}
 } as const;

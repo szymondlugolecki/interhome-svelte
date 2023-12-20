@@ -39,4 +39,7 @@
 	Nasza firma specjalizuje się w kompleksowej regeneracji turbosprężarek do samochodów osobowych,
 	ciężarowych, maszyn rolniczych oraz budowlanych. Realizujemy naprawy nawet najpoważniejszych
 	uszkodzeń, oferując znacząco tańsze rozwiązanie od zakupu nowego podzespołu.
+{:else if service === 'car-rental'}
+	Oferujemy wynajem auta zastępczego już od 100zł netto za dobę. Więcej szczegółów u doradcy w
+	serwisie.
 {/if}

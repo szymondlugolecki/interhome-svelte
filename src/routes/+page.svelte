@@ -11,12 +11,9 @@
 	import OpenStatus from './(components)/open-status.svelte';
 	import { onMount } from 'svelte';
 	import Review from './(components)/review.svelte';
-
-	import { Loader } from '@googlemaps/js-api-loader';
-	import { env } from '$env/dynamic/public';
 	import OfferServiceDescription from './(components)/offer-service-description.svelte';
 
-	const serviceEntries = Object.entries(services) as [
+	const serviceEntries = Object.entries(services).filter(([key]) => key !== 'car-rental') as [
 		keyof typeof services,
 		(typeof services)[keyof typeof services]
 	][];
