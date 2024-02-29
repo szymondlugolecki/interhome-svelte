@@ -114,6 +114,11 @@
 	</div>
 </section>
 
+<!-- <section
+	id="baner"
+	class="scroll-m-20 flex flex-col items-center justify-start w-full [&>*:nth-child(odd)]:bg-background/50 [&>*:nth-child(even)]:bg-background py-36 bg-red-500"
+/> -->
+
 <!-- <section class="relative px-8 py-24 overflow-hidden isolate sm:py-32 lg:px-8" id="zaswiadczenie">
 	<div class="absolute inset-0 -z-10 opacity-10" />
 	<div class="max-w-2xl mx-auto lg:max-w-4xl">

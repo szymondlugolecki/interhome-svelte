@@ -48,7 +48,7 @@
 </p>
 
 <p class="leading-7">
-	Dowiedz się więcej tutaj: <a href="https://naprawaturbo.pl/" class="text-blue-600"
+	Dowiedz się więcej tutaj: <a target="_blank" href="https://naprawaturbo.pl/" class="text-blue-600"
 		>naprawaturbo.pl</a
 	>
 </p>
