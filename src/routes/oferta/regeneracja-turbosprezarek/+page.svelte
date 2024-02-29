@@ -47,6 +47,12 @@
 	regeneracji turbosprężarek.
 </p>
 
+<p class="leading-7">
+	Dowiedz się więcej tutaj: <a href="https://naprawaturbo.pl/" class="text-blue-600"
+		>naprawaturbo.pl</a
+	>
+</p>
+
 <div class="flex flex-col w-full py-6 gap-y-6">
 	<h2 class="text-2xl font-semibold tracking-tight scroll-m-20">Galeria</h2>
 
