@@ -14,7 +14,7 @@
 
 {#if visible}
 	<section
-		class="sticky bottom-5 left-0 right-0 w-full px-2.5 sm:px-5 z-40 overflow-hidden"
+		class="sticky bottom-5 left-0 right-0 w-full px-2.5 sm:px-5 pb-1.5 z-40 overflow-hidden"
 		in:fade={{
 			duration: 1000,
 			delay: 1000
