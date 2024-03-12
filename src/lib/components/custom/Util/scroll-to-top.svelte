@@ -8,7 +8,7 @@
 		duration: 300,
 		delay: 0
 	}}
-	class="fixed inline-flex items-center justify-center text-sm rounded-full shadow bg-primary bottom-4 right-4 square-14 text-primary-foreground hover:bg-primary/90"
+	class="fixed z-50 inline-flex items-center justify-center text-sm rounded-full shadow bg-primary bottom-4 right-4 square-14 text-primary-foreground hover:bg-primary/90"
 	href="#top"
 >
 	<ArrowUp size={24} />

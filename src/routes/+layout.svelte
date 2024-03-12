@@ -10,6 +10,7 @@
 
 	import { inview } from 'svelte-inview';
 	import type { ObserverEventDetails } from 'svelte-inview';
+	import PromotionBanner from './(components)/promotion-banner.svelte';
 
 	let isInView: boolean;
 	const inViewChange = ({ detail }: CustomEvent<ObserverEventDetails>) => {
@@ -35,6 +36,7 @@
 	<div class="min-h-screen">
 		<slot />
 	</div>
+	<PromotionBanner />
 	<Footer />
 	{#if !isInView}
 		<ScrollToTop />
