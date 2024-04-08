@@ -27,7 +27,7 @@
 		</Drawer.Header> -->
 
 		<div class="flex items-center justify-center w-full pt-4">
-			<div class="w-[400px]">
+			<div class="w-[350px] min-[500]:w-[400px] sm:w-[450px]">
 				<Image
 					class="object-cover object-center w-full h-full"
 					loading="eager"
@@ -47,7 +47,7 @@
 
 		<Drawer.Footer class="flex items-center justify-center w-full px-2">
 			<Drawer.Close
-				class="py-2 font-semibold rounded-md bg-foreground text-background max-w-[400px] w-full"
+				class="py-2 font-semibold rounded-md bg-foreground text-background max-w-[360px] min-[500]:max-w-[400px] sm:max-w-[450px] w-full"
 				>Zamknij</Drawer.Close
 			>
 		</Drawer.Footer>
