@@ -27,7 +27,7 @@
 		</Drawer.Header> -->
 
 		<div class="flex items-center justify-center w-full pt-4">
-			<div class="w-[350px] min-[500]:w-[400px] sm:w-[450px]">
+			<div class="w-[280px] min-[320px]:w-[310px] min-[500px]:w-[400px] sm:w-[450px]">
 				<Image
 					class="object-cover object-center w-full h-full"
 					loading="eager"
