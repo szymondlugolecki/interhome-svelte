@@ -19,6 +19,8 @@
 
 	// Inject the Analytics functionality
 	inject({ mode: dev ? 'development' : 'production' });
+
+	let visible = false;
 </script>
 
 <svelte:head>
@@ -36,9 +38,9 @@
 	<div class="min-h-screen">
 		<slot />
 	</div>
-	<PromotionBanner />
+	<PromotionBanner bind:visible />
 	<Footer />
-	{#if !isInView}
+	{#if !isInView && !visible}
 		<ScrollToTop />
 	{/if}
 </div>

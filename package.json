@@ -57,6 +57,7 @@
 		"tailwind-merge": "^1.14.0",
 		"tailwind-variants": "^0.1.14",
 		"tailwindcss-animatecss": "^3.0.4",
+		"vaul-svelte": "^0.3.0",
 		"vite-imagetools": "^5.0.8"
 	}
 }
