@@ -19,14 +19,14 @@
 </script>
 
 <!-- {#if visible} -->
-<Drawer.Root bind:open={visible}>
-	<Drawer.Content class="text-foreground">
-		<Drawer.Header>
+<Drawer.Root bind:open={visible} preventScroll={false}>
+	<Drawer.Content class="text-foreground bg-background">
+		<!-- <Drawer.Header>
 			<Drawer.Title>Oferta okresowa</Drawer.Title>
 			<Drawer.Description>Ta oferta jest ograniczona czasowo</Drawer.Description>
-		</Drawer.Header>
+		</Drawer.Header> -->
 
-		<div class="flex items-center justify-center w-full">
+		<div class="flex items-center justify-center w-full pt-4">
 			<div class="w-[400px]">
 				<Image
 					class="object-cover object-center w-full h-full"
@@ -45,8 +45,11 @@
 			class="absolute bottom-0 right-0 px-2 py-2 text-lg font-bold text-white">Zamknij</button
 		> -->
 
-		<Drawer.Footer>
-			<Drawer.Close>Zamknij</Drawer.Close>
+		<Drawer.Footer class="flex items-center justify-center w-full px-2">
+			<Drawer.Close
+				class="py-2 font-semibold rounded-md bg-foreground text-background max-w-[400px] w-full"
+				>Zamknij</Drawer.Close
+			>
 		</Drawer.Footer>
 	</Drawer.Content>
 </Drawer.Root>
