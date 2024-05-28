@@ -1,10 +1,7 @@
 <script lang="ts">
 	import Image from '$components/custom/Util/image.svelte';
-	import Button from '$components/ui/button/button.svelte';
-	import { fade } from 'svelte/transition';
-	import Banner from '$assets/baner.jpg?w=1000&format=avif;webp;jpg&as=picture';
+	import Banner from '$assets/banners/WAKACJE.jpg?w=1000&format=avif;webp;jpg&as=picture';
 	import { onNavigate } from '$app/navigation';
-	import { X } from 'lucide-svelte';
 	import * as Drawer from '$lib/components/ui/drawer';
 
 	export let visible: boolean;

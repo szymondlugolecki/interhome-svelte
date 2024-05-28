@@ -1,39 +1,8 @@
 <script lang="ts">
 	import OutletContactInfo from './(components)/outlet-contact-info.svelte';
-	import { onMount } from 'svelte';
 
-	import { Loader } from '@googlemaps/js-api-loader';
-	import { env } from '$env/dynamic/public';
+	// import { Loader } from '@googlemaps/js-api-loader';
 	import { Separator } from '$lib/components/ui/separator';
-
-	const mapOptions = {
-		center: {
-			lat: 52.866647,
-			lng: 20.602871
-		},
-		zoom: 18
-	} satisfies google.maps.MapOptions;
-
-	onMount(() => {
-		const loader = new Loader({
-			apiKey: env.PUBLIC_GOOGLE_MAPS_API_KEY,
-			version: 'weekly'
-		});
-
-		const mapElement = document.getElementById('map');
-
-		if (mapElement) {
-			loader
-				.importLibrary('maps')
-				.then(({ Map }) => {
-					new Map(mapElement, mapOptions);
-				})
-				.catch((e) => {
-					// do something
-					console.error(e);
-				});
-		}
-	});
 
 	const outletContactInfo = [
 		{
@@ -92,17 +61,16 @@
 					</address>
 				</div>
 				<div class="flex justify-center w-full overflow-x-auto rounded-lg">
-					<div id="map" class="w-[1216px] h-[450px]" />
-					<!-- <iframe
-					title="Mapa dojazdu do Interhome"
-					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2408.542285868978!2d20.6028713!3d52.8666473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471c2ec13d0ccdc1%3A0xd22ced45baf77712!2sMazowiecka%206%2C%2006-400%20Ciechan%C3%B3w!5e0!3m2!1spl!2spl!4v1689539529109!5m2!1spl!2spl"
-					width="1216"
-					height="450"
-					class="border-0 rounded-lg"
-					allowFullScreen={true}
-					loading="lazy"
-					referrerPolicy="no-referrer-when-downgrade"
-				/> -->
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3406.1422568155535!2d20.595154701945095!3d52.8672993185738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471c2ec6a598dfe7%3A0x1566545c9bd56f57!2sInterhome%20Centrum%20Motoryzacji%20Mechanika%20Hamownia%20Regeneracja%20Turbospr%C4%99%C5%BCarek!5e0!3m2!1spl!2spl!4v1716888515155!5m2!1spl!2spl"
+						width="1216"
+						height="450"
+						style="border:0;"
+						title="Mapa lokalizacji Interhome"
+						allowfullscreen={true}
+						loading="lazy"
+						referrerpolicy="no-referrer-when-downgrade"
+					/>
 				</div>
 			</section>
 		</main>
