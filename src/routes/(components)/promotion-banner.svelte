@@ -10,7 +10,6 @@
 	}, 1000);
 
 	onNavigate(() => {
-		console.log('navigating');
 		clearTimeout(timeout);
 	});
 </script>

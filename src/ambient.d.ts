@@ -29,6 +29,11 @@ interface OutputMetadata {
 	isProgressive: boolean; // indicating whether the image is interlaced using a progressive scan
 }
 
+declare module '*&as=metadata&imagetools-gallery&allowUpscale=true' {
+	const outputs: Array<OutputMetadata>;
+	export default outputs;
+}
+
 declare module '*&as=metadata&imagetools-gallery' {
 	const outputs: Array<OutputMetadata>;
 	export default outputs;

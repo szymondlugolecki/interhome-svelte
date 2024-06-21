@@ -63,7 +63,7 @@
 		</div>
 		<div class="self-start">
 			<div class="text-xs">
-				<p class="leading-5">© Interhome 2023 - Wszelkie prawa zastrzeżone</p>
+				<p class="leading-5">© Interhome 2024 - Wszelkie prawa zastrzeżone</p>
 			</div>
 		</div>
 	</div>

@@ -2,6 +2,7 @@
 	// Images
 	import generalImages from '$lib/images/general';
 	import lobbyImages from '$lib/images/lobby';
+	import newImages from '$lib/images/new-images';
 	import vehicleMechanicsImages from '$lib/images/vehicle-mechanics';
 	import turbochargersImages from '$lib/images/turbochargers';
 	import inspectionStationImages from '$lib/images/inspection-station';
@@ -12,6 +13,7 @@
 	const items = [
 		...generalImages,
 		...lobbyImages,
+		...newImages,
 		...vehicleMechanicsImages,
 		...turbochargersImages,
 		...inspectionStationImages,
