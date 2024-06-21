@@ -1,22 +1,14 @@
 <script lang="ts">
 	import Image from '$components/custom/Util/image.svelte';
-	import Banner from '$assets/banners/WAKACJE.jpg?w=1000&format=avif;webp;jpg&as=picture';
-	import { onNavigate } from '$app/navigation';
+	import Banner from '$assets/banners/WAKACJE.jpg?w=500&format=avif;webp;jpg&as=picture';
 	import * as Drawer from '$lib/components/ui/drawer';
 
-	export let visible: boolean;
-	const timeout = setTimeout(() => {
-		visible = true;
-	}, 1000);
-
-	onNavigate(() => {
-		clearTimeout(timeout);
-	});
+	export let showPromotionBanner: boolean;
 </script>
 
-<!-- {#if visible} -->
-<Drawer.Root bind:open={visible} preventScroll={false}>
-	<Drawer.Content class="text-foreground bg-background">
+<!-- {#if showPromotionBanner} -->
+<Drawer.Root bind:open={showPromotionBanner} preventScroll={false}>
+	<Drawer.Content class="text-foreground bg-background" aria-label="Baner promocyjny">
 		<!-- <Drawer.Header>
 			<Drawer.Title>Oferta okresowa</Drawer.Title>
 			<Drawer.Description>Ta oferta jest ograniczona czasowo</Drawer.Description>
@@ -33,11 +25,11 @@
 			</div>
 		</div>
 		<!-- <button
-			on:click={() => (visible = false)}
+			on:click={() => (showPromotionBanner = false)}
 			class="absolute top-0 right-0 p-2 font-bold text-white sm:p-2 sm:text-lg"><X /></button
 		>
 		<button
-			on:click={() => (visible = false)}
+			on:click={() => (showPromotionBanner = false)}
 			class="absolute bottom-0 right-0 px-2 py-2 text-lg font-bold text-white">Zamknij</button
 		> -->
 
