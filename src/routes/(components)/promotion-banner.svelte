@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Image from '$components/custom/Util/image.svelte';
-	import Banner from '$assets/banners/WAKACJE.jpg?w=500&format=avif;webp;jpg&as=picture';
+	import Banner from '$assets/banners/zima.png?w=500&format=avif;webp;jpg&as=picture';
 	import * as Drawer from '$lib/components/ui/drawer';
 
 	export let showPromotionBanner: boolean;
