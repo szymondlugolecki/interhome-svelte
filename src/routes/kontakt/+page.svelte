@@ -15,7 +15,7 @@
 		},
 		{
 			title: 'Tachografy',
-			phones: ['23 672 14 39', '573 412 312']
+			phones: ['23 672 14 39']
 		},
 		{
 			title: 'Stacja diagnostyczna',
